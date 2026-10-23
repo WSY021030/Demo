@@ -1,0 +1,37 @@
+{
+  "export_schema": "paper-export.v1",
+  "paper_id": "springer_10_1007_s10489_024_05747_w",
+  "paper_revision": "0a47a0201f90435f",
+  "source_url": "https://link.springer.com/article/10.1007/s10489-024-05747-w",
+  "source_html_sha256": "sha256:dd2bb0f5db1bfa93d2e17c3d0cfdf380aac5a9533e61462c6e268d6f8a2f5b2c",
+  "paper_json_sha256": "sha256:c75792574eca9be4cd9ed82a3fa4c24cae343a8533f5321966d284c5ee2b3b57",
+  "normalized_html_sha256": "sha256:393e6bc32af1e5b8ba060f051abb8add4a9c065a41cfc0b85dd275a975d27ece",
+  "asset_counts": {
+    "total": 3,
+    "copied": 3,
+    "missing": 0,
+    "skipped_unsafe_or_unsupported": 0
+  },
+  "equation_rendering": {
+    "total": 6,
+    "rendered": 6,
+    "native_mathml": 6,
+    "fallback": 0
+  },
+  "quality": {
+    "body": "complete",
+    "figures": "complete",
+    "tables": "complete",
+    "references": "complete",
+    "warnings": [
+      "Saved Springer Table 2 found but no valid grid: table_2.html",
+      "Saved Springer Table 3 found but no valid grid: table_3.html",
+      "Saved Springer Table 4 found but no valid grid: table_4.html",
+      "Saved Springer Table 5 found but no valid grid: table_5.html",
+      "Saved Springer Table 6 found but no valid grid: table_6.html",
+      "Saved Springer Table 7 found but no valid grid: table_7.html",
+      "Saved Springer Table 8 found but no valid grid: table_8.html",
+      "Saved Springer Table 9 found but no valid grid: table_9.html"
+    ]
+  }
+}

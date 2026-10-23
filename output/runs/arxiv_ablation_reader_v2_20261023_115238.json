@@ -1,0 +1,1660 @@
+{
+  "pipeline": "reader_v2",
+  "pipeline_report": {
+    "pipeline": "reader_v2",
+    "trace": [
+      "validate_request",
+      "prepare_selection",
+      "claim_agent",
+      "evidence_agent",
+      "mapping_agent",
+      "reviewer_agent",
+      "reasoning_path_agent",
+      "conclusion_agent"
+    ],
+    "claim_calls_are_batched": true,
+    "evidence_candidate_rounds": 1,
+    "mapping_rounds": 1,
+    "gap_repair_rounds": 0,
+    "mapping_claim_diagnostic_count": 0,
+    "document_mode": null,
+    "unexpanded_mapping_targets": []
+  },
+  "claim_results": [
+    {
+      "claim_id": "claim_001",
+      "claim_text": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+      "source_quote": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+      "claim_type": "result",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0060",
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 116,
+          "end": 283,
+          "exact": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+          "prefix": " pipeline. As shown in Table 6, ",
+          "suffix": " This demonstrates their complem"
+        }
+      },
+      "evidence_links": [],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [],
+      "issue": {
+        "kind": "invalid_source",
+        "message": "A proposed evidence link did not pass source-integrity checking.",
+        "relation_id": "relation_001"
+      },
+      "evidence_search_note": "No linked evidence identified in this run."
+    },
+    {
+      "claim_id": "claim_002",
+      "claim_text": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+      "source_quote": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+      "claim_type": "observation",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0060",
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 284,
+          "end": 393,
+          "exact": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+          "prefix": "2.51% and 19.19%, respectively. ",
+          "suffix": " Additionally, the retrieval on "
+        }
+      },
+      "evidence_links": [
+        {
+          "relation_id": "relation_002",
+          "relation_type": "supports",
+          "source_id": "evidence_002",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.88,
+          "evidence_id": "evidence_002",
+          "evidence_type": "table",
+          "source_element_id": "table_0006",
+          "source_anchors": [
+            {
+              "element_id": "table_0006",
+              "selector": {
+                "type": "table_cells",
+                "cell_ids": [
+                  "cell_0006_0004",
+                  "cell_0006_0006",
+                  "cell_0006_0010",
+                  "cell_0006_0012"
+                ]
+              }
+            }
+          ],
+          "verification_level": "table_cells",
+          "source_table_number": 6,
+          "grounded_values": [
+            {
+              "cell_id": "cell_0006_0004",
+              "path": [
+                "grid",
+                "cells",
+                3,
+                "text"
+              ],
+              "value": "w/o Graph Encoder",
+              "description": "Ablation label showing effect of removing graph encoder"
+            },
+            {
+              "cell_id": "cell_0006_0006",
+              "path": [
+                "grid",
+                "cells",
+                5,
+                "text"
+              ],
+              "value": "\\downarrow 22.51%",
+              "description": "Substantial performance drop when graph encoder removed"
+            },
+            {
+              "cell_id": "cell_0006_0010",
+              "path": [
+                "grid",
+                "cells",
+                9,
+                "text"
+              ],
+              "value": "w/o Textualized Graph",
+              "description": "Ablation label showing effect of removing textualized graph"
+            },
+            {
+              "cell_id": "cell_0006_0012",
+              "path": [
+                "grid",
+                "cells",
+                11,
+                "text"
+              ],
+              "value": "\\downarrow 19.19%",
+              "description": "Substantial performance drop when textualized graph removed"
+            }
+          ],
+          "visual_observations": []
+        }
+      ],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [
+        {
+          "path_id": "reader_path_001",
+          "node_ids": [
+            "evidence_002",
+            "claim_002"
+          ],
+          "relation_ids": [
+            "relation_002"
+          ],
+          "path_role": "primary",
+          "explanation": "Table 6 lists ablations labeled “w/o Graph Encoder” and “w/o Textualized Graph” with corresponding performance drops of ↓22.51% and ↓19.19%. Those specific cells directly substantiate the claim that the two components have notable, and complementary, impacts when removed — i.e., they affect the graph representation in embedded (graph encoder) and textualized (textualized graph) formats. The table cells are a direct one-hop piece of evidence for this observation.",
+          "gap_description": null
+        }
+      ],
+      "issue": null,
+      "evidence_search_note": null
+    },
+    {
+      "claim_id": "claim_003",
+      "claim_text": "the retrieval on graphs is also important to the overall performance.",
+      "source_quote": "the retrieval on graphs is also important to the overall performance.",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0060",
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 408,
+          "end": 477,
+          "exact": "the retrieval on graphs is also important to the overall performance.",
+          "prefix": "embedded formats. Additionally, ",
+          "suffix": " Further details are available i"
+        }
+      },
+      "evidence_links": [
+        {
+          "relation_id": "relation_003",
+          "relation_type": "supports",
+          "source_id": "evidence_003",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.9,
+          "evidence_id": "evidence_003",
+          "evidence_type": "table",
+          "source_element_id": "table_0006",
+          "source_anchors": [
+            {
+              "element_id": "table_0006",
+              "selector": {
+                "type": "table_cells",
+                "cell_ids": [
+                  "cell_0006_0013",
+                  "cell_0006_0015"
+                ]
+              }
+            }
+          ],
+          "verification_level": "table_cells",
+          "source_table_number": 6,
+          "grounded_values": [
+            {
+              "cell_id": "cell_0006_0013",
+              "path": [
+                "grid",
+                "cells",
+                12,
+                "text"
+              ],
+              "value": "w/o Retrieval",
+              "description": "Ablation row removing retrieval"
+            },
+            {
+              "cell_id": "cell_0006_0015",
+              "path": [
+                "grid",
+                "cells",
+                14,
+                "text"
+              ],
+              "value": "\\downarrow 9.43%",
+              "description": "Reported drop when retrieval is removed"
+            }
+          ],
+          "visual_observations": []
+        }
+      ],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [
+        {
+          "path_id": "reader_path_002",
+          "node_ids": [
+            "evidence_003",
+            "claim_003"
+          ],
+          "relation_ids": [
+            "relation_003"
+          ],
+          "path_role": "primary",
+          "explanation": "Table 6 includes a row labeled “w/o Retrieval” showing a performance drop of ↓9.43%. That one-hop table cell directly supports the claim that retrieval on graphs matters to overall performance because removing retrieval causes a measurable decline.",
+          "gap_description": null
+        }
+      ],
+      "issue": null,
+      "evidence_search_note": null
+    },
+    {
+      "claim_id": "claim_004",
+      "claim_text": "it is robust to the choice of graph encoders (see Appendix B.4)",
+      "source_quote": "it is robust to the choice of graph encoders (see Appendix B.4)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0060",
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 578,
+          "end": 641,
+          "exact": "it is robust to the choice of graph encoders (see Appendix B.4)",
+          "prefix": "ional studies on our framework: ",
+          "suffix": " and benefits from the increased"
+        }
+      },
+      "evidence_links": [],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [],
+      "issue": null,
+      "evidence_search_note": "No linked evidence identified in this run."
+    },
+    {
+      "claim_id": "claim_005",
+      "claim_text": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+      "source_quote": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0061",
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 14,
+          "end": 95,
+          "exact": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+          "prefix": "Additionally, ",
+          "suffix": ", a discussion on the complexity"
+        }
+      },
+      "evidence_links": [],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [],
+      "issue": null,
+      "evidence_search_note": "No linked evidence identified in this run."
+    },
+    {
+      "claim_id": "claim_006",
+      "claim_text": "a discussion on the complexity (see Appendix E)",
+      "source_quote": "a discussion on the complexity (see Appendix E)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0061",
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 97,
+          "end": 144,
+          "exact": "a discussion on the complexity (see Appendix E)",
+          "prefix": "ieval methods (see Appendix D), ",
+          "suffix": ", and demonstrations on how to u"
+        }
+      },
+      "evidence_links": [],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [],
+      "issue": null,
+      "evidence_search_note": "No linked evidence identified in this run."
+    },
+    {
+      "claim_id": "claim_007",
+      "claim_text": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+      "source_quote": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "para_0061",
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 150,
+          "end": 233,
+          "exact": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+          "prefix": "omplexity (see Appendix E), and ",
+          "suffix": "."
+        }
+      },
+      "evidence_links": [
+        {
+          "relation_id": "relation_004",
+          "relation_type": "supports",
+          "source_id": "evidence_004",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.95,
+          "evidence_id": "evidence_004",
+          "evidence_type": "text",
+          "source_element_id": "para_0001",
+          "source_anchors": [
+            {
+              "element_id": "para_0001",
+              "selector": {
+                "type": "text_span",
+                "start": 0,
+                "end": 158,
+                "exact": "Given a graph with textual attributes, we enable users to ‘chat with their graph’: that is, to ask questions about the graph using a conversational interface.",
+                "prefix": "",
+                "suffix": ""
+              }
+            }
+          ],
+          "verification_level": "source_text",
+          "source_table_number": null,
+          "grounded_values": [
+            {
+              "cell_id": null,
+              "path": [
+                "text"
+              ],
+              "value": "Given a graph with textual attributes, we enable users to ‘chat with their graph’: that is, to ask questions about the graph using a conversational interface.",
+              "description": "Paragraph explicitly describes enabling users to 'chat with their graph' via a conversational interface"
+            }
+          ],
+          "visual_observations": []
+        }
+      ],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [
+        {
+          "path_id": "reader_path_003",
+          "node_ids": [
+            "evidence_004",
+            "claim_007"
+          ],
+          "relation_ids": [
+            "relation_004"
+          ],
+          "path_role": "secondary",
+          "explanation": "The quoted sentence states that users can “chat with their graph” via a conversational interface, which supports the paper’s claim that demonstrations exist for that capability. However, the sentence asserts capability rather than providing the actual demonstrations referenced (Appendix G). Thus it supports the claim at a descriptive level but does not substitute for the Appendix demonstration materials themselves.",
+          "gap_description": "The path shows the system can ‘chat with their graph’ but does not show the Appendix G demonstration artifacts (examples, transcripts, screenshots, or usage instructions) that the claim refers to. [SEARCH_PREMISE: Appendix G: provide the demonstration examples, transcripts, or screenshots that illustrate using G-Retriever to ‘chat with your graph’ (conversational queries, prompts, and model responses).]"
+        }
+      ],
+      "issue": {
+        "kind": "logic_gap",
+        "message": "The path shows the system can ‘chat with their graph’ but does not show the Appendix G demonstration artifacts (examples, transcripts, screenshots, or usage instructions) that the claim refers to. [SEARCH_PREMISE: Appendix G: provide the demonstration examples, transcripts, or screenshots that illustrate using G-Retriever to ‘chat with your graph’ (conversational queries, prompts, and model responses).]",
+        "path_id": "reader_path_003"
+      },
+      "evidence_search_note": null
+    }
+  ],
+  "generated_conclusion": {
+    "narrative": "In this section, several key claims are made regarding the performance and functionality of graph retrieval systems. Claim **claim_001** suggests notable performance drops of 22.51% and 19.19% when the graph encoder and textualized graph components are removed, respectively; however, the supporting evidence for this claim was found to be from an invalid source and thus lacks verification. This leaves Claim **claim_002**, which asserts the complementary effects of both components' removal on graph representation, as supported by Table 6, specifically highlighting corresponding performance declines. Claim **claim_003** also finds support, showing a performance drop of 9.43% associated with the removal of retrieval functions, further emphasizing its importance in overall system performance. Additional claims, namely **claim_004**, **claim_005**, and **claim_006**, present assertions that are not yet supported with evidence, pointing to proposed content in appendices that may clarify robustness with graph encoders, comparisons with existing methods, and discussions on complexity but currently lack substantiating data. Meanwhile, Claim **claim_007** discusses interfaces for users to interact conversationally with graphs. While there is some supporting text indicating this capability, there exists a logic gap as it fails to provide the specific artifacts or demonstrations referenced, leaving an open question about the practical implementation of this feature. Overall, this section shows a mix of supported claims with certain conclusions emphasized by concrete evidence, alongside several that are not yet substantiated, indicating directions for future exploration and verification of the system's claimed functionalities.",
+    "key_claim_ids": [
+      "claim_001",
+      "claim_002",
+      "claim_003",
+      "claim_004",
+      "claim_005",
+      "claim_006",
+      "claim_007"
+    ]
+  },
+  "document_sections": [],
+  "document_report": null,
+  "schema_version": "analysis.v2",
+  "paper_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+  "status": "partial",
+  "warnings": [
+    "Figure pixels are used only when the source image is successfully attached; see image_report for actual attachments.",
+    "Discarded ungrounded model paraphrase for para_0060; using exact quote.",
+    "Discarded ungrounded model paraphrase for para_0061; using exact quote.",
+    "Promoted empirical/uncertain Claim to requires_support in para_0061.",
+    "Rejected 1 range Claim candidate(s): para_0060: quote_not_found_verbatim",
+    "Returned windows and rejected source quotes are tracked separately. Neither proves exhaustive claim recall, image review, or accepted support.",
+    "1 source sentence(s) are not covered by initial Claim anchors; review the diagnostic examples, which may contain ordinary prose rather than Claims.",
+    "1 Claim candidate(s) were rejected without promotion; see claim_extraction_diagnostics for the model-returned text and exact rejection reason."
+  ],
+  "errors": [
+    "Rejected source grounding for relation relation_001."
+  ],
+  "llm_call_count": 4,
+  "api_cost_report": {
+    "currency": "USD",
+    "estimate_only": true,
+    "price_checked_on": "2026-10-21",
+    "pricing_basis": "OpenAI standard online rates applied to API-reported tokens (including image input/reasoning output, not billing data)",
+    "accounting_note": "Image input is already included in reported input tokens. Reasoning is already included in output tokens. Neither is charged a second time. Hidden SDK retries/requests without usage receipts cannot be reconciled with the invoice.",
+    "input_images": 2,
+    "reasoning_tokens": 1024,
+    "failed_attempts": 0,
+    "llm_calls_recorded": 4,
+    "input_tokens": 13617,
+    "cached_input_tokens": 0,
+    "output_tokens": 4378,
+    "complete": true,
+    "estimated_total_usd": 0.01075525,
+    "known_cost_usd": 0.01075525,
+    "unpriced_models": [],
+    "by_agent": [
+      {
+        "agent": "Claim",
+        "llm_calls": 1,
+        "input_tokens": 1415,
+        "cached_input_tokens": 0,
+        "output_tokens": 456,
+        "estimated_cost_usd": 0.00048585,
+        "known_cost_usd": 0.00048585
+      },
+      {
+        "agent": "Conclusion",
+        "llm_calls": 1,
+        "input_tokens": 1365,
+        "cached_input_tokens": 0,
+        "output_tokens": 349,
+        "estimated_cost_usd": 0.00041415,
+        "known_cost_usd": 0.00041415
+      },
+      {
+        "agent": "Mapping",
+        "llm_calls": 1,
+        "input_tokens": 9068,
+        "cached_input_tokens": 0,
+        "output_tokens": 2766,
+        "estimated_cost_usd": 0.007799,
+        "known_cost_usd": 0.007799
+      },
+      {
+        "agent": "Reasoning",
+        "llm_calls": 1,
+        "input_tokens": 1769,
+        "cached_input_tokens": 0,
+        "output_tokens": 807,
+        "estimated_cost_usd": 0.00205625,
+        "known_cost_usd": 0.00205625
+      }
+    ],
+    "by_model": [
+      {
+        "model": "gpt-4o-mini-2024-07-18",
+        "llm_calls": 2,
+        "input_tokens": 2780,
+        "cached_input_tokens": 0,
+        "output_tokens": 805,
+        "estimated_cost_usd": 0.0009,
+        "known_cost_usd": 0.0009
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "llm_calls": 2,
+        "input_tokens": 10837,
+        "cached_input_tokens": 0,
+        "output_tokens": 3573,
+        "estimated_cost_usd": 0.00985525,
+        "known_cost_usd": 0.00985525
+      }
+    ],
+    "calls": [
+      {
+        "agent": "Claim",
+        "model": "gpt-4o-mini-2024-07-18",
+        "response_id": "resp_084641d078596339006adb82c9370c87d29fde1f368ac73463",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 0,
+        "service_tier": "default",
+        "requested_model": "gpt-4o-mini",
+        "input_tokens": 1415,
+        "cached_input_tokens": 0,
+        "output_tokens": 456,
+        "estimated_cost_usd": 0.00048585,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Mapping",
+        "model": "gpt-5-mini-2025-08-07",
+        "response_id": "resp_0370c6b423437ced006adb82ce413887d29554e119c5e61322",
+        "call_status": "returned",
+        "input_images": 2,
+        "reasoning_tokens": 704,
+        "service_tier": "default",
+        "requested_model": "gpt-5-mini",
+        "input_tokens": 9068,
+        "cached_input_tokens": 0,
+        "output_tokens": 2766,
+        "estimated_cost_usd": 0.007799,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Reasoning",
+        "model": "gpt-5-mini-2025-08-07",
+        "response_id": "resp_04f9ce1b8df464c8006adb82e410b087d2a5c5e2c547c3b49b",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 320,
+        "service_tier": "default",
+        "requested_model": "gpt-5-mini",
+        "input_tokens": 1769,
+        "cached_input_tokens": 0,
+        "output_tokens": 807,
+        "estimated_cost_usd": 0.00205625,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Conclusion",
+        "model": "gpt-4o-mini-2024-07-18",
+        "response_id": "resp_0b24a596a418947e006adb82eb958087d2abdf628a30182aec",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 0,
+        "service_tier": "default",
+        "requested_model": "gpt-4o-mini",
+        "input_tokens": 1365,
+        "cached_input_tokens": 0,
+        "output_tokens": 349,
+        "estimated_cost_usd": 0.00041415,
+        "pricing_status": "priced"
+      }
+    ],
+    "budget_managed": false
+  },
+  "budget_report": null,
+  "image_report": {
+    "mode": "images_in_existing_mapping_call",
+    "attachments_sent": 2,
+    "unique_images_sent": 2,
+    "events": [
+      {
+        "element_id": "fig_0001",
+        "asset_id": "asset_0001",
+        "source_path": "assets/asset_0001.png",
+        "source_sha256": "73e4cac203eca28a0649a8a3e6e48ada167db0a34faa690e9989089528404d00",
+        "sent_sha256": "73e4cac203eca28a0649a8a3e6e48ada167db0a34faa690e9989089528404d00",
+        "width": 1980,
+        "height": 665,
+        "cell_id": null,
+        "conversion": null,
+        "model": "gpt-5-mini-2025-08-07",
+        "request_id": "resp_0370c6b423437ced006adb82ce413887d29554e119c5e61322",
+        "status": "submitted_with_response"
+      },
+      {
+        "element_id": "fig_0003",
+        "asset_id": "asset_0004",
+        "source_path": "assets/asset_0004.png",
+        "source_sha256": "faccfd0484d34d48e8968216e183893e30bcedc2b3fb63cabad99a4c63eef4c8",
+        "sent_sha256": "faccfd0484d34d48e8968216e183893e30bcedc2b3fb63cabad99a4c63eef4c8",
+        "width": 1634,
+        "height": 574,
+        "cell_id": null,
+        "conversion": null,
+        "model": "gpt-5-mini-2025-08-07",
+        "request_id": "resp_0370c6b423437ced006adb82ce413887d29554e119c5e61322",
+        "status": "submitted_with_response"
+      }
+    ],
+    "note": "An attachment receipt proves which image was sent, not that every digit or plot interpretation is correct."
+  },
+  "analysis_plan": {
+    "schema_version": "scope_plan.v1",
+    "mode": "section",
+    "paper_id": "arxiv_2402_07630",
+    "paper_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+    "requested_section_ids": [
+      "sec_018"
+    ],
+    "section_ids": [
+      "sec_018"
+    ],
+    "sections": [
+      {
+        "section_id": "sec_018",
+        "title": "Ablation Study",
+        "paragraph_count": 2
+      }
+    ],
+    "target_element_ids": [
+      "para_0060",
+      "para_0061"
+    ],
+    "evidence_element_ids": [
+      "table_0005",
+      "table_0006"
+    ],
+    "paragraph_count": 2,
+    "window_count": 2,
+    "text_characters": 941,
+    "claim_batch_count": 1,
+    "batches": [
+      {
+        "batch_id": "claim_batch_001",
+        "windows": [
+          {
+            "window_id": "para_0060:0:707",
+            "element_id": "para_0060",
+            "section_id": "sec_018",
+            "start": 0,
+            "end": 707
+          },
+          {
+            "window_id": "para_0061:0:234",
+            "element_id": "para_0061",
+            "section_id": "sec_018",
+            "start": 0,
+            "end": 234
+          }
+        ]
+      }
+    ],
+    "evidence_search_scope": "whole_document",
+    "batch_chars": 9000,
+    "batch_paragraphs": 5,
+    "notes": [
+      "All selected nonempty paragraphs are scheduled for text claim extraction; no PDF/HTML reparsing.",
+      "Tables, figures, equations and references are evidence candidates, not independently exhaustive targets.",
+      "Long paragraphs use overlapping windows; a very long cross-window claim may still be missed.",
+      "A completed extraction window is not proof of complete claim recall or semantic correctness."
+    ]
+  },
+  "scope_report": {
+    "mode": "section",
+    "selected_section_ids": [
+      "sec_018"
+    ],
+    "scheduled_paragraphs": 2,
+    "paragraphs_with_all_windows_returned": 1,
+    "scheduled_windows": 2,
+    "window_status_counts": {
+      "rejected_candidates": 1,
+      "parsed": 1
+    },
+    "all_extraction_windows_returned": false,
+    "all_extraction_windows_responded": true,
+    "all_extraction_windows_clean": false,
+    "unreturned_window_ids": [],
+    "rejected_candidate_count": 1,
+    "windows_with_rejected_candidates": [
+      "para_0060:0:707"
+    ],
+    "unprocessed_or_incomplete_element_ids": [
+      "para_0060"
+    ],
+    "windows": [
+      {
+        "window_id": "para_0060:0:707",
+        "element_id": "para_0060",
+        "section_id": "sec_018",
+        "start": 0,
+        "end": 707,
+        "batch_id": "claim_batch_001",
+        "status": "rejected_candidates",
+        "accepted_claims": 4,
+        "rejected_candidates": 1
+      },
+      {
+        "window_id": "para_0061:0:234",
+        "element_id": "para_0061",
+        "section_id": "sec_018",
+        "start": 0,
+        "end": 234,
+        "batch_id": "claim_batch_001",
+        "status": "parsed",
+        "accepted_claims": 3,
+        "rejected_candidates": 0
+      }
+    ],
+    "evidence_search_scope": "whole_document",
+    "note": "Returned windows and rejected source quotes are tracked separately. Neither proves exhaustive claim recall, image review, or accepted support."
+  },
+  "coverage_report": {
+    "scope": "extracted_claims_only",
+    "claims_extracted": 7,
+    "claims_with_linked_evidence": 3,
+    "claims_without_linked_evidence": [
+      "claim_001",
+      "claim_004",
+      "claim_005",
+      "claim_006"
+    ],
+    "claims_with_reasoning_paths": 3,
+    "source_integrity_issues": 1,
+    "note": "Counts found links only; no supported/partial/unsupported classifications are made."
+  },
+  "claim_recall_report": {
+    "scope": "selected_paragraphs_only",
+    "initial_claims_in_scope": 7,
+    "mapped_intermediate_claims_in_scope": 0,
+    "potential_omissions": [],
+    "potential_omission_count": 0,
+    "uncovered_sentence_count": 1,
+    "uncovered_sentence_examples": [
+      {
+        "source_element_id": "para_0060",
+        "start": 0,
+        "end": 94,
+        "source_quote": "In this ablation study, we assess the individual impact of key components within our pipeline.",
+        "initially_covered_fraction": 0.0,
+        "interpretation": "potentially_unexamined_sentence_not_a_verified_claim"
+      }
+    ],
+    "excluded_unverified_intermediates": 0,
+    "excluded_unverified_initial_spans": 0,
+    "source_rechecked_against_paper": true,
+    "coverage_threshold": 0.8,
+    "note": "These exact-source statements were discovered later by Mapping but not sufficiently covered by initial Claim spans. They require review; some may be contextual, redundant, or otherwise not standalone claims. This is a lower-bound diagnostic, NOT a guarantee that other claims were not missed. Uncovered source sentences are approximate review leads, not proven omitted scientific claims. No extra model calls, target promotion, or evidence edges were created."
+  },
+  "claim_extraction_diagnostics": {
+    "rejected_candidate_count": 1,
+    "reason_counts": {
+      "quote_not_found_verbatim": 1
+    },
+    "candidates": [
+      {
+        "element_id": "para_0060",
+        "window_id": "para_0060:0:707",
+        "source_field": "text",
+        "reason": "quote_not_found_verbatim",
+        "candidate_text": "The framework benefits from the increased scale of LLMs.",
+        "candidate_source_quote": "it benefits from the increased scale of LLMs (see Appendix B.5).",
+        "claim_type": "claim",
+        "evidence_policy": "requires_support"
+      }
+    ],
+    "note": "Candidates are retained for diagnosis only. They were not promoted to Claims because no unique exact-source span was established; rejection may reflect model paraphrase, formatting mismatch, ambiguity or a genuinely invalid candidate."
+  },
+  "run_report": {
+    "run_status": "finished",
+    "reason": "All scheduled analysis steps finished.",
+    "claim_windows_planned": 2,
+    "claim_windows_responded": 2,
+    "unreturned_window_ids": [],
+    "initial_targets_total": 7,
+    "initial_targets_analyzed": 7,
+    "unattempted_initial_target_ids": [],
+    "mapping_rounds_used": 1,
+    "mapping_rounds_limit": 4,
+    "source_integrity_issues": 1,
+    "current_step": "reader_conclusion_complete",
+    "note": "Operational completion only; an empty Evidence list does not mean a Claim is false."
+  },
+  "section_conclusion": {
+    "format": "reader_section_links.v1",
+    "title": "Ablation Study",
+    "run_status": "finished",
+    "narrative": "In this section, several key claims are made regarding the performance and functionality of graph retrieval systems. Claim **claim_001** suggests notable performance drops of 22.51% and 19.19% when the graph encoder and textualized graph components are removed, respectively; however, the supporting evidence for this claim was found to be from an invalid source and thus lacks verification. This leaves Claim **claim_002**, which asserts the complementary effects of both components' removal on graph representation, as supported by Table 6, specifically highlighting corresponding performance declines. Claim **claim_003** also finds support, showing a performance drop of 9.43% associated with the removal of retrieval functions, further emphasizing its importance in overall system performance. Additional claims, namely **claim_004**, **claim_005**, and **claim_006**, present assertions that are not yet supported with evidence, pointing to proposed content in appendices that may clarify robustness with graph encoders, comparisons with existing methods, and discussions on complexity but currently lack substantiating data. Meanwhile, Claim **claim_007** discusses interfaces for users to interact conversationally with graphs. While there is some supporting text indicating this capability, there exists a logic gap as it fails to provide the specific artifacts or demonstrations referenced, leaving an open question about the practical implementation of this feature. Overall, this section shows a mix of supported claims with certain conclusions emphasized by concrete evidence, alongside several that are not yet substantiated, indicating directions for future exploration and verification of the system's claimed functionalities.",
+    "total_initial_claims": 7,
+    "claims_with_links": 3,
+    "findings": [
+      {
+        "claim_id": "claim_001",
+        "source_element_id": "para_0060",
+        "source_anchor": {
+          "element_id": "para_0060",
+          "selector": {
+            "type": "text_span",
+            "start": 116,
+            "end": 283,
+            "exact": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+            "prefix": " pipeline. As shown in Table 6, ",
+            "suffix": " This demonstrates their complem"
+          }
+        },
+        "original_statement": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+        "claim_type": "result",
+        "issue": {
+          "kind": "invalid_source",
+          "message": "A proposed evidence link did not pass source-integrity checking.",
+          "relation_id": "relation_001"
+        },
+        "evidence_ids": [],
+        "relation_ids": [],
+        "path_ids": []
+      },
+      {
+        "claim_id": "claim_002",
+        "source_element_id": "para_0060",
+        "source_anchor": {
+          "element_id": "para_0060",
+          "selector": {
+            "type": "text_span",
+            "start": 284,
+            "end": 393,
+            "exact": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+            "prefix": "2.51% and 19.19%, respectively. ",
+            "suffix": " Additionally, the retrieval on "
+          }
+        },
+        "original_statement": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+        "claim_type": "observation",
+        "issue": null,
+        "evidence_ids": [
+          "evidence_002"
+        ],
+        "relation_ids": [
+          "relation_002"
+        ],
+        "path_ids": [
+          "reader_path_001"
+        ]
+      },
+      {
+        "claim_id": "claim_003",
+        "source_element_id": "para_0060",
+        "source_anchor": {
+          "element_id": "para_0060",
+          "selector": {
+            "type": "text_span",
+            "start": 408,
+            "end": 477,
+            "exact": "the retrieval on graphs is also important to the overall performance.",
+            "prefix": "embedded formats. Additionally, ",
+            "suffix": " Further details are available i"
+          }
+        },
+        "original_statement": "the retrieval on graphs is also important to the overall performance.",
+        "claim_type": "claim",
+        "issue": null,
+        "evidence_ids": [
+          "evidence_003"
+        ],
+        "relation_ids": [
+          "relation_003"
+        ],
+        "path_ids": [
+          "reader_path_002"
+        ]
+      },
+      {
+        "claim_id": "claim_004",
+        "source_element_id": "para_0060",
+        "source_anchor": {
+          "element_id": "para_0060",
+          "selector": {
+            "type": "text_span",
+            "start": 578,
+            "end": 641,
+            "exact": "it is robust to the choice of graph encoders (see Appendix B.4)",
+            "prefix": "ional studies on our framework: ",
+            "suffix": " and benefits from the increased"
+          }
+        },
+        "original_statement": "it is robust to the choice of graph encoders (see Appendix B.4)",
+        "claim_type": "claim",
+        "issue": null,
+        "evidence_ids": [],
+        "relation_ids": [],
+        "path_ids": []
+      },
+      {
+        "claim_id": "claim_005",
+        "source_element_id": "para_0061",
+        "source_anchor": {
+          "element_id": "para_0061",
+          "selector": {
+            "type": "text_span",
+            "start": 14,
+            "end": 95,
+            "exact": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+            "prefix": "Additionally, ",
+            "suffix": ", a discussion on the complexity"
+          }
+        },
+        "original_statement": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+        "claim_type": "claim",
+        "issue": null,
+        "evidence_ids": [],
+        "relation_ids": [],
+        "path_ids": []
+      },
+      {
+        "claim_id": "claim_006",
+        "source_element_id": "para_0061",
+        "source_anchor": {
+          "element_id": "para_0061",
+          "selector": {
+            "type": "text_span",
+            "start": 97,
+            "end": 144,
+            "exact": "a discussion on the complexity (see Appendix E)",
+            "prefix": "ieval methods (see Appendix D), ",
+            "suffix": ", and demonstrations on how to u"
+          }
+        },
+        "original_statement": "a discussion on the complexity (see Appendix E)",
+        "claim_type": "claim",
+        "issue": null,
+        "evidence_ids": [],
+        "relation_ids": [],
+        "path_ids": []
+      },
+      {
+        "claim_id": "claim_007",
+        "source_element_id": "para_0061",
+        "source_anchor": {
+          "element_id": "para_0061",
+          "selector": {
+            "type": "text_span",
+            "start": 150,
+            "end": 233,
+            "exact": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+            "prefix": "omplexity (see Appendix E), and ",
+            "suffix": "."
+          }
+        },
+        "original_statement": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+        "claim_type": "claim",
+        "issue": {
+          "kind": "logic_gap",
+          "message": "The path shows the system can ‘chat with their graph’ but does not show the Appendix G demonstration artifacts (examples, transcripts, screenshots, or usage instructions) that the claim refers to. [SEARCH_PREMISE: Appendix G: provide the demonstration examples, transcripts, or screenshots that illustrate using G-Retriever to ‘chat with your graph’ (conversational queries, prompts, and model responses).]",
+          "path_id": "reader_path_003"
+        },
+        "evidence_ids": [
+          "evidence_004"
+        ],
+        "relation_ids": [
+          "relation_004"
+        ],
+        "path_ids": [
+          "reader_path_003"
+        ]
+      }
+    ],
+    "extraction_coverage": {
+      "windows_planned": 2,
+      "windows_responded": 2,
+      "all_extraction_windows_clean": false,
+      "exhaustive_claim_recall": "not_proven"
+    },
+    "generated_conclusion": {
+      "narrative": "In this section, several key claims are made regarding the performance and functionality of graph retrieval systems. Claim **claim_001** suggests notable performance drops of 22.51% and 19.19% when the graph encoder and textualized graph components are removed, respectively; however, the supporting evidence for this claim was found to be from an invalid source and thus lacks verification. This leaves Claim **claim_002**, which asserts the complementary effects of both components' removal on graph representation, as supported by Table 6, specifically highlighting corresponding performance declines. Claim **claim_003** also finds support, showing a performance drop of 9.43% associated with the removal of retrieval functions, further emphasizing its importance in overall system performance. Additional claims, namely **claim_004**, **claim_005**, and **claim_006**, present assertions that are not yet supported with evidence, pointing to proposed content in appendices that may clarify robustness with graph encoders, comparisons with existing methods, and discussions on complexity but currently lack substantiating data. Meanwhile, Claim **claim_007** discusses interfaces for users to interact conversationally with graphs. While there is some supporting text indicating this capability, there exists a logic gap as it fails to provide the specific artifacts or demonstrations referenced, leaving an open question about the practical implementation of this feature. Overall, this section shows a mix of supported claims with certain conclusions emphasized by concrete evidence, alongside several that are not yet substantiated, indicating directions for future exploration and verification of the system's claimed functionalities.",
+      "key_claim_ids": [
+        "claim_001",
+        "claim_002",
+        "claim_003",
+        "claim_004",
+        "claim_005",
+        "claim_006",
+        "claim_007"
+      ]
+    },
+    "note": "Relations are Mapping interpretations; provenance checks do not certify scientific truth."
+  },
+  "input_tokens_used": 13617,
+  "output_tokens_used": 4378,
+  "mapping_round": 1,
+  "gap_repair_round": 0,
+  "current_step": "reader_conclusion_complete",
+  "paper_id": "arxiv_2402_07630",
+  "query": null,
+  "target": null,
+  "claims": [
+    {
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 116,
+          "end": 283,
+          "exact": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+          "prefix": " pipeline. As shown in Table 6, ",
+          "suffix": " This demonstrates their complem"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_001",
+      "text": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+      "source_quote": "there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.",
+      "claim_type": "result",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0060",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0060",
+        "sentence_index": null,
+        "char_start": 116,
+        "char_end": 283
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 284,
+          "end": 393,
+          "exact": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+          "prefix": "2.51% and 19.19%, respectively. ",
+          "suffix": " Additionally, the retrieval on "
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_002",
+      "text": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+      "source_quote": "This demonstrates their complementary effects in representing the graph in both textual and embedded formats.",
+      "claim_type": "observation",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0060",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0060",
+        "sentence_index": null,
+        "char_start": 284,
+        "char_end": 393
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 408,
+          "end": 477,
+          "exact": "the retrieval on graphs is also important to the overall performance.",
+          "prefix": "embedded formats. Additionally, ",
+          "suffix": " Further details are available i"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_003",
+      "text": "the retrieval on graphs is also important to the overall performance.",
+      "source_quote": "the retrieval on graphs is also important to the overall performance.",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0060",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0060",
+        "sentence_index": null,
+        "char_start": 408,
+        "char_end": 477
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0060",
+        "selector": {
+          "type": "text_span",
+          "start": 578,
+          "end": 641,
+          "exact": "it is robust to the choice of graph encoders (see Appendix B.4)",
+          "prefix": "ional studies on our framework: ",
+          "suffix": " and benefits from the increased"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_004",
+      "text": "it is robust to the choice of graph encoders (see Appendix B.4)",
+      "source_quote": "it is robust to the choice of graph encoders (see Appendix B.4)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0060",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0060",
+        "sentence_index": null,
+        "char_start": 578,
+        "char_end": 641
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 14,
+          "end": 95,
+          "exact": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+          "prefix": "Additionally, ",
+          "suffix": ", a discussion on the complexity"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_005",
+      "text": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+      "source_quote": "we include a detailed comparison with existing retrieval methods (see Appendix D)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0061",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0061",
+        "sentence_index": null,
+        "char_start": 14,
+        "char_end": 95
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 97,
+          "end": 144,
+          "exact": "a discussion on the complexity (see Appendix E)",
+          "prefix": "ieval methods (see Appendix D), ",
+          "suffix": ", and demonstrations on how to u"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_006",
+      "text": "a discussion on the complexity (see Appendix E)",
+      "source_quote": "a discussion on the complexity (see Appendix E)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0061",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0061",
+        "sentence_index": null,
+        "char_start": 97,
+        "char_end": 144
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "para_0061",
+        "selector": {
+          "type": "text_span",
+          "start": 150,
+          "end": 233,
+          "exact": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+          "prefix": "omplexity (see Appendix E), and ",
+          "suffix": "."
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "claim_id": "claim_007",
+      "text": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+      "source_quote": "demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "para_0061",
+      "source_location": {
+        "section_id": "sec_018",
+        "paragraph_id": "para_0061",
+        "sentence_index": null,
+        "char_start": 150,
+        "char_end": 233
+      },
+      "section_id": "sec_018",
+      "confidence": null
+    }
+  ],
+  "evidence": [
+    {
+      "visual_groundings": [],
+      "source_anchors": [],
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "verification_level": null,
+      "source_table_number": null,
+      "table_cell_contexts": {},
+      "evidence_id": "evidence_001",
+      "evidence_type": "table",
+      "source_element_id": "table_0006",
+      "role": "support",
+      "content": "path=[\"caption\"] value=\"Ablation study on the WebQSP dataset.\"\nCELL_ID=\"cell_0006_0004\" row=1 col=0 role=data path=[\"grid\", \"cells\", 3, \"text\"] value=\"w/o Graph Encoder\"\nCELL_ID=\"cell_0006_0005\" row=1 col=1 role=data path=[\"grid\", \"cells\", 4, \"text\"] value=\"54.62 ± 0.78\"\nCELL_ID=\"cell_0006_0006\" row=1 col=2 role=data path=[\"grid\", \"cells\", 5, \"text\"] value=\"\\\\downarrow 22.51%\"\nCELL_ID=\"cell_0006_0010\" row=3 col=0 role=data path=[\"grid\", \"cells\", 9, \"text\"] value=\"w/o Textualized Graph\"\nCELL_ID=\"cell_0006_0011\" row=3 col=1 role=data path=[\"grid\", \"cells\", 10, \"text\"] value=\"56.96 ± 1.83\"\nCELL_ID=\"cell_0006_0012\" row=3 col=2 role=data path=[\"grid\", \"cells\", 11, \"text\"] value=\"\\\\downarrow 19.19%\"\nCELL_ID=\"cell_0006_0001\" row=0 col=0 role=data path=[\"grid\", \"cells\", 0, \"text\"] value=\"Method\"\nCELL_ID=\"cell_0006_0002\" row=0 col=1 role=data path=[\"grid\", \"cells\", 1, \"text\"] value=\"Hit@1\"\nCELL_ID=\"cell_0006_0003\" row=0 col=2 role=data path=[\"grid\", \"cells\", 2, \"text\"] value=\"\\\\Delta_{\\\\text{{G-Retriever}}}\"\nCELL_ID=\"cell_0006_0013\" row=4 col=0 role=data path=[\"grid\", \"cells\", 12, \"text\"] value=\"w/o Retrieval\"\nCELL_ID=\"cell_0006_0014\" row=4 col=1 role=data path=[\"grid\", \"cells\", 13, \"text\"] value=\"63.84 ± 0.41\"\nCELL_ID=\"cell_0006_0015\" row=4 col=2 role=data path=[\"grid\", \"cells\", 14, \"text\"] value=\"\\\\downarrow 9.43%\"\nCELL_ID=\"cell_0006_0007\" row=2 col=0 role=data path=[\"grid\", \"cells\", 6, \"text\"] value=\"w/o Projection Layer\"\nCELL_ID=\"cell_0006_0008\" row=2 col=1 role=data path=[\"grid\", \"cells\", 7, \"text\"] value=\"69.70 ± 0.68\"\nCELL_ID=\"cell_0006_0009\" row=2 col=2 role=data path=[\"grid\", \"cells\", 8, \"text\"] value=\"\\\\downarrow 1.11%\"",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": "cell_0006_0004",
+          "path": [
+            "grid",
+            "cells",
+            3,
+            "text"
+          ],
+          "expected": "w/o Graph Encoder",
+          "mode": "equals",
+          "description": "Row label for ablation removing graph encoder"
+        },
+        {
+          "cell_id": "cell_0006_0006",
+          "path": [
+            "grid",
+            "cells",
+            5,
+            "text"
+          ],
+          "expected": "\\downarrow 22.51%",
+          "mode": "equals",
+          "description": "Reported performance drop when removing graph encoder"
+        },
+        {
+          "cell_id": "cell_0006_0010",
+          "path": [
+            "grid",
+            "cells",
+            9,
+            "text"
+          ],
+          "expected": "w/o Textualized Graph",
+          "mode": "equals",
+          "description": "Row label for ablation removing textualized graph"
+        },
+        {
+          "cell_id": "cell_0006_0012",
+          "path": [
+            "grid",
+            "cells",
+            11,
+            "text"
+          ],
+          "expected": "\\downarrow 19.19%",
+          "mode": "equals",
+          "description": "Reported performance drop when removing textualized graph"
+        },
+        {
+          "cell_id": "cell_0006_0001",
+          "path": [
+            "caption"
+          ],
+          "expected": "Ablation study on the WebQSP dataset.",
+          "mode": "contains",
+          "description": "Table caption indicating this is the ablation study referenced in the claim"
+        }
+      ],
+      "section_id": "sec_018",
+      "confidence": 0.95
+    },
+    {
+      "visual_groundings": [],
+      "source_anchors": [
+        {
+          "element_id": "table_0006",
+          "selector": {
+            "type": "table_cells",
+            "cell_ids": [
+              "cell_0006_0004",
+              "cell_0006_0006",
+              "cell_0006_0010",
+              "cell_0006_0012"
+            ]
+          }
+        }
+      ],
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "verification_level": "table_cells",
+      "source_table_number": 6,
+      "table_cell_contexts": {
+        "cell_0006_0004": {
+          "row": 1,
+          "col": 0,
+          "role": "data",
+          "row_label": "w/o Graph Encoder",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "cell_0006_0006": {
+          "row": 1,
+          "col": 2,
+          "role": "data",
+          "row_label": "w/o Graph Encoder",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "cell_0006_0010": {
+          "row": 3,
+          "col": 0,
+          "role": "data",
+          "row_label": "w/o Textualized Graph",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "cell_0006_0012": {
+          "row": 3,
+          "col": 2,
+          "role": "data",
+          "row_label": "w/o Textualized Graph",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        }
+      },
+      "evidence_id": "evidence_002",
+      "evidence_type": "table",
+      "source_element_id": "table_0006",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: table_cells\npath=[\"grid\", \"cells\", 3, \"text\"] value=\"w/o Graph Encoder\"\npath=[\"grid\", \"cells\", 5, \"text\"] value=\"\\\\downarrow 22.51%\"\npath=[\"grid\", \"cells\", 9, \"text\"] value=\"w/o Textualized Graph\"\npath=[\"grid\", \"cells\", 11, \"text\"] value=\"\\\\downarrow 19.19%\"",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": "cell_0006_0004",
+          "path": [
+            "grid",
+            "cells",
+            3,
+            "text"
+          ],
+          "expected": "w/o Graph Encoder",
+          "mode": "equals",
+          "description": "Ablation label showing effect of removing graph encoder"
+        },
+        {
+          "cell_id": "cell_0006_0006",
+          "path": [
+            "grid",
+            "cells",
+            5,
+            "text"
+          ],
+          "expected": "\\downarrow 22.51%",
+          "mode": "equals",
+          "description": "Substantial performance drop when graph encoder removed"
+        },
+        {
+          "cell_id": "cell_0006_0010",
+          "path": [
+            "grid",
+            "cells",
+            9,
+            "text"
+          ],
+          "expected": "w/o Textualized Graph",
+          "mode": "equals",
+          "description": "Ablation label showing effect of removing textualized graph"
+        },
+        {
+          "cell_id": "cell_0006_0012",
+          "path": [
+            "grid",
+            "cells",
+            11,
+            "text"
+          ],
+          "expected": "\\downarrow 19.19%",
+          "mode": "equals",
+          "description": "Substantial performance drop when textualized graph removed"
+        }
+      ],
+      "section_id": "sec_018",
+      "confidence": 0.88
+    },
+    {
+      "visual_groundings": [],
+      "source_anchors": [
+        {
+          "element_id": "table_0006",
+          "selector": {
+            "type": "table_cells",
+            "cell_ids": [
+              "cell_0006_0013",
+              "cell_0006_0015"
+            ]
+          }
+        }
+      ],
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "verification_level": "table_cells",
+      "source_table_number": 6,
+      "table_cell_contexts": {
+        "cell_0006_0013": {
+          "row": 4,
+          "col": 0,
+          "role": "data",
+          "row_label": "w/o Retrieval",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "cell_0006_0015": {
+          "row": 4,
+          "col": 2,
+          "role": "data",
+          "row_label": "w/o Retrieval",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        }
+      },
+      "evidence_id": "evidence_003",
+      "evidence_type": "table",
+      "source_element_id": "table_0006",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: table_cells\npath=[\"grid\", \"cells\", 12, \"text\"] value=\"w/o Retrieval\"\npath=[\"grid\", \"cells\", 14, \"text\"] value=\"\\\\downarrow 9.43%\"",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": "cell_0006_0013",
+          "path": [
+            "grid",
+            "cells",
+            12,
+            "text"
+          ],
+          "expected": "w/o Retrieval",
+          "mode": "equals",
+          "description": "Ablation row removing retrieval"
+        },
+        {
+          "cell_id": "cell_0006_0015",
+          "path": [
+            "grid",
+            "cells",
+            14,
+            "text"
+          ],
+          "expected": "\\downarrow 9.43%",
+          "mode": "equals",
+          "description": "Reported drop when retrieval is removed"
+        }
+      ],
+      "section_id": "sec_018",
+      "confidence": 0.9
+    },
+    {
+      "visual_groundings": [],
+      "source_anchors": [
+        {
+          "element_id": "para_0001",
+          "selector": {
+            "type": "text_span",
+            "start": 0,
+            "end": 158,
+            "exact": "Given a graph with textual attributes, we enable users to ‘chat with their graph’: that is, to ask questions about the graph using a conversational interface.",
+            "prefix": "",
+            "suffix": ""
+          }
+        }
+      ],
+      "source_revision": "sha256:f0dc9a0492fb5a0c787e85e1779925d285fe4ac72c2f37d0e7cb1963a1219d51",
+      "verification_level": "source_text",
+      "source_table_number": null,
+      "table_cell_contexts": {},
+      "evidence_id": "evidence_004",
+      "evidence_type": "text",
+      "source_element_id": "para_0001",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: source_text\npath=[\"text\"] value=\"Given a graph with textual attributes, we enable users to ‘chat with their graph’: that is, to ask questions about the graph using a conversational interface.\"",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": null,
+          "path": [
+            "text"
+          ],
+          "expected": "Given a graph with textual attributes, we enable users to ‘chat with their graph’: that is, to ask questions about the graph using a conversational interface.",
+          "mode": "contains",
+          "description": "Paragraph explicitly describes enabling users to 'chat with their graph' via a conversational interface"
+        }
+      ],
+      "section_id": "sec_001",
+      "confidence": 0.95
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "relation_001",
+      "source_id": "evidence_001",
+      "target_id": "claim_001",
+      "relation_type": "supports",
+      "discovery_method": "explicit_link",
+      "confidence": 0.95,
+      "source_verified": false,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "rejected",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "table_0006",
+        "para_0060"
+      ]
+    },
+    {
+      "relation_id": "relation_002",
+      "source_id": "evidence_002",
+      "target_id": "claim_002",
+      "relation_type": "supports",
+      "discovery_method": "explicit_link",
+      "confidence": 0.88,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "table_0006",
+        "para_0060"
+      ]
+    },
+    {
+      "relation_id": "relation_003",
+      "source_id": "evidence_003",
+      "target_id": "claim_003",
+      "relation_type": "supports",
+      "discovery_method": "explicit_link",
+      "confidence": 0.9,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "table_0006",
+        "para_0060"
+      ]
+    },
+    {
+      "relation_id": "relation_004",
+      "source_id": "evidence_004",
+      "target_id": "claim_007",
+      "relation_type": "supports",
+      "discovery_method": "lexical_search",
+      "confidence": 0.95,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "para_0001",
+        "para_0061"
+      ]
+    }
+  ],
+  "reasoning_paths": [
+    {
+      "path_id": "reader_path_001",
+      "target_id": "claim_002",
+      "node_ids": [
+        "evidence_002",
+        "claim_002"
+      ],
+      "relation_ids": [
+        "relation_002"
+      ],
+      "path_role": "primary",
+      "confidence": 0.85,
+      "explanation": "Table 6 lists ablations labeled “w/o Graph Encoder” and “w/o Textualized Graph” with corresponding performance drops of ↓22.51% and ↓19.19%. Those specific cells directly substantiate the claim that the two components have notable, and complementary, impacts when removed — i.e., they affect the graph representation in embedded (graph encoder) and textualized (textualized graph) formats. The table cells are a direct one-hop piece of evidence for this observation.",
+      "needs_more_mapping": false,
+      "gap_description": null,
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    },
+    {
+      "path_id": "reader_path_002",
+      "target_id": "claim_003",
+      "node_ids": [
+        "evidence_003",
+        "claim_003"
+      ],
+      "relation_ids": [
+        "relation_003"
+      ],
+      "path_role": "primary",
+      "confidence": 0.8,
+      "explanation": "Table 6 includes a row labeled “w/o Retrieval” showing a performance drop of ↓9.43%. That one-hop table cell directly supports the claim that retrieval on graphs matters to overall performance because removing retrieval causes a measurable decline.",
+      "needs_more_mapping": false,
+      "gap_description": null,
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    },
+    {
+      "path_id": "reader_path_003",
+      "target_id": "claim_007",
+      "node_ids": [
+        "evidence_004",
+        "claim_007"
+      ],
+      "relation_ids": [
+        "relation_004"
+      ],
+      "path_role": "secondary",
+      "confidence": 0.6,
+      "explanation": "The quoted sentence states that users can “chat with their graph” via a conversational interface, which supports the paper’s claim that demonstrations exist for that capability. However, the sentence asserts capability rather than providing the actual demonstrations referenced (Appendix G). Thus it supports the claim at a descriptive level but does not substitute for the Appendix demonstration materials themselves.",
+      "needs_more_mapping": true,
+      "gap_description": "The path shows the system can ‘chat with their graph’ but does not show the Appendix G demonstration artifacts (examples, transcripts, screenshots, or usage instructions) that the claim refers to. [SEARCH_PREMISE: Appendix G: provide the demonstration examples, transcripts, or screenshots that illustrate using G-Retriever to ‘chat with your graph’ (conversational queries, prompts, and model responses).]",
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    }
+  ],
+  "gaps": [],
+  "explanation": "CLAIM → EVIDENCE LINKS (Reader-v2; no proof grading)\n\n[claim_001] there are performance drops when any of these components are removed, with the graph encoder and textualized graph showing declines of 22.51% and 19.19%, respectively.\nSource: para_0060\nNo linked Evidence in this run.\n\n[claim_002] This demonstrates their complementary effects in representing the graph in both textual and embedded formats.\nSource: para_0060\nLinks: supports: evidence_002\n\n[claim_003] the retrieval on graphs is also important to the overall performance.\nSource: para_0060\nLinks: supports: evidence_003\n\n[claim_004] it is robust to the choice of graph encoders (see Appendix B.4)\nSource: para_0060\nNo linked Evidence in this run.\n\n[claim_005] we include a detailed comparison with existing retrieval methods (see Appendix D)\nSource: para_0061\nNo linked Evidence in this run.\n\n[claim_006] a discussion on the complexity (see Appendix E)\nSource: para_0061\nNo linked Evidence in this run.\n\n[claim_007] demonstrations on how to use G-Retriever to ‘chat with your graph’ (see Appendix G)\nSource: para_0061\nLinks: supports: evidence_004"
+}

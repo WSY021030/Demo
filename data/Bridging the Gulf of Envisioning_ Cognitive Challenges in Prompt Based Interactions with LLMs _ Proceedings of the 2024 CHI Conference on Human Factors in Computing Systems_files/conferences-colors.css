@@ -1,0 +1,1051 @@
+.glsvlsi {
+    --primary-color: #a41953;
+    --light-color: #af5d79;
+    --lighter-color: #857177;
+    --diff-color: #657e44;
+    --nav-font-color: #333;
+    --dropdown-background-color: #eccad4;
+}
+.fse {
+    --primary-color: #007d4a;
+    --light-color: #4d816a;
+    --lighter-color: #617c70;
+    --diff-color: #b6491d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a7d6c1;
+}
+.islped{
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+}
+.gecco {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+.gis {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+}
+.iccad {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+}
+.ih-n-mmsec {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+}
+.nossdav {
+    --primary-color: #1975ae;
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+}
+.etra {
+    --primary-color: #1975ae;
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+}
+.pads {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+}
+.pepm {
+    --primary-color: #007d4a;
+    --light-color: #4d816a;
+    --lighter-color: #617c70;
+    --diff-color: #b6491d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a7d6c1;
+}
+.pldi {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+.podc {
+    --primary-color: #a41953;
+    --light-color: #af5d79;
+    --lighter-color: #857177;
+    --diff-color: #657e44;
+    --nav-font-color: #333;
+    --dropdown-background-color: #eccad4;
+}
+.plop {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+}
+.uccs {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+}
+.foga {
+    --primary-color: #813c83;
+    --light-color: #8e6b8e;
+    --lighter-color: #996979;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dc98ae;
+}
+.pact {
+    --primary-color: #813c83;
+    --light-color: #8e6b8e;
+    --lighter-color: #996979;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dc98ae;
+}
+.fpga {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+}
+.npar {
+    --primary-color: #19513b;
+    --light-color: #318050;
+    --lighter-color: #5d7e6b;
+    --diff-color: #773d25;
+}
+.eurosys {
+    --primary-color: #19513b;
+    --light-color: #318050;
+    --lighter-color: #5d7e6b;
+    --diff-color: #773d25;
+    --nav-font-color: #333;
+    --dropdown-background-color: #8cbfa1;
+}
+
+.search-result--tile {
+    --primary-color: #1975ae;
+}
+.cgo {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+}
+.bcb {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+}
+.sac {
+    --primary-color: #4b7d6c;
+    --light-color: #647b74;
+    --lighter-color: #717876;
+    --diff-color: #a4684a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dae8e4;
+}
+.hpg {
+    --primary-color: #3b6963;
+    --light-color: #657b79;
+    --lighter-color: #727777;
+    --diff-color: #a4684a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c9d3d3;
+}
+.sacmat {
+    --primary-color: #3b6963;
+    --light-color: #657b79;
+    --lighter-color: #727777;
+    --diff-color: #a4684a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c9d3d3;
+}
+.ase {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.icmi-mlmi {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.spaa {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.gpce {
+    --primary-color: #115878;
+    --light-color: #2e7ba6;
+    --lighter-color: #527d87;
+    --diff-color: #ad6511;
+    --nav-font-color: #333;
+    --dropdown-background-color: #8bd5e5;
+}
+.popl {
+    --primary-color: #115878;
+    --light-color: #2e7ba6;
+    --lighter-color: #527d87;
+    --diff-color: #ad6511;
+    --nav-font-color: #333;
+    --dropdown-background-color: #8bd5e5;
+}
+.group {
+    --primary-color: #2f7d2f;
+    --light-color: #54814d;
+    --lighter-color: #71796d;
+    --diff-color: #803838;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dbecd4;
+}
+.ppopp {
+    --primary-color: #2f7d2f;
+    --light-color: #54814d;
+    --lighter-color: #71796d;
+    --diff-color: #803838;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dbecd4;
+}
+.hotmobile {
+    --primary-color: #005b6f;
+    --light-color: #3d7f92;
+    --lighter-color: #6b797e;
+    --diff-color: #b35900;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b6ced6;
+}
+.recsys {
+    --primary-color: #005b6f;
+    --light-color: #3d7f92;
+    --lighter-color: #6b797e;
+    --diff-color: #b35900;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b6ced6;
+}
+.hpdc {
+    --primary-color: #4b7d6c;
+    --light-color: #647b74;
+    --lighter-color: #717876;
+    --diff-color: #a4684a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dae8e4;
+}
+.sensys {
+    --primary-color: #005b6f;
+    --light-color: #547a9e;
+    --lighter-color: #66788b;
+    --diff-color: #b35900;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a4c1df;
+}
+.hri {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+}
+.tallip {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+}
+.ht {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+}
+.sbcci {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+}
+.sc {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+}
+.i3d {
+    --primary-color: #005a9e;
+    --light-color: #547a9e;
+    --lighter-color: #66788b;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a4c1df;
+}
+.sca {
+    --primary-color: #005a9e;
+    --light-color: #547a9e;
+    --lighter-color: #66788b;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a4c1df;
+}
+.icac {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.sensys {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.acm-se {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+.ice {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+
+.slip {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+
+.ancs {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+}
+
+.icer {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+}
+
+.soda {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+}
+.apgv {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+}
+.icfp {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+}
+.sosp {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+}
+.ase {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.icmi-mlmi {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+.spaa {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+}
+
+.asia-ccs {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+
+.icpe {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+
+.splash {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+
+.aspdac {
+    --primary-color: #a41953;
+    --light-color: #af5d79;
+    --lighter-color: #857177;
+    --diff-color: #657e44;
+    --nav-font-color: #333;
+    --dropdown-background-color: #eccad4;
+}
+
+.ics {
+    --primary-color: #a41953;
+    --light-color: #af5d79;
+    --lighter-color: #857177;
+    --diff-color: #657e44;
+    --nav-font-color: #333;
+    --dropdown-background-color: #eccad4;
+}
+
+.stoc {
+    --primary-color: #a41953;
+    --light-color: #af5d79;
+    --lighter-color: #857177;
+    --diff-color: #657e44;
+    --nav-font-color: #333;
+    --dropdown-background-color: #eccad4;
+}
+
+.asplos {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+.icse {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+.sui {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+}
+.assets {
+    --primary-color: #33461c;
+    --light-color: #717a5d;
+    --lighter-color: #75776f;
+    --diff-color: #7e495f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c9bb;
+}
+.icuimc {
+    --primary-color: #33461c;
+    --light-color: #717a5d;    
+    --lighter-color: #75776f;
+    --diff-color: #7e495f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c9bb;
+}
+.sub-nav .dropdown__toggle[title="More"]{
+    color: var(--nav-font-color);
+}
+.sub-nav .dropdown__toggle i{
+    color: var(--nav-font-color);
+}
+
+.sub-nav .dropdown-more .dropdown__menu{
+    background-color: var(--dropdown-background-color);
+}
+.tei {
+    --primary-color: #33461c;    
+    --light-color: #717a5d;
+    --lighter-color: #75776f;
+    --diff-color: #7e495f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c9bb;
+}
+.aus-ce {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+
+.ideas {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+
+.ubicomp {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+
+.c-n-c {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+}
+.imc {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+}
+.uist {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+}
+.ccs {
+    --primary-color: #a0501b;
+    --light-color: #9c6c4d;
+    --lighter-color: #82746a;
+    --diff-color: #116655;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7cfbc;
+}
+.ir {
+    --primary-color: #a0501b;
+    --light-color: #9c6c4d;
+    --lighter-color: #82746a;
+    --diff-color: #116655;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7cfbc;
+}
+.valuetools {
+    --primary-color: #a0501b;
+    --light-color: #9c6c4d;
+    --lighter-color: #82746a;
+    --diff-color: #116655;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7cfbc;
+}
+.cf {
+    --primary-color: #1975ae;
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+}
+.isca {
+    --primary-color: #1975ae;    
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+}
+.vrst {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+}
+.chi {
+    --primary-color: #cb2a3f;
+    --light-color: #bf5556;
+    --lighter-color: #86726f;
+    --diff-color: #5e7f53;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbd6d0;
+}
+.ismm {
+    --primary-color: #d53247;
+    --light-color: #bf5556;
+    --lighter-color: #86726f;
+    --diff-color: #5e7f53;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbd6d0;
+}
+.web3d {
+    --primary-color: #d53247;
+    --light-color: #bf5556;
+    --lighter-color: #86726f;
+    --diff-color: #5e7f53;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbd6d0;
+}
+.cikm {
+    --primary-color: #00509e;
+    --light-color: #6275ab;
+    --lighter-color: #737686;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4c9e3;
+}
+.ispd {
+    --primary-color: #00509e;
+    --light-color: #6275ab;
+    --lighter-color: #737686;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4c9e3;
+}
+.websci {
+    --primary-color: #00509e;
+    --light-color: #6275ab;
+    --lighter-color: #737686;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4c9e3;
+}
+.codaspy {
+    --primary-color: #318181;
+    --light-color: #567d7d;
+    --lighter-color: #6f7878;
+    --diff-color: #9f6b40;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dff1f0;
+}
+.issta {
+    --primary-color: #318181;
+    --light-color: #567d7d;
+    --lighter-color: #6f7878;
+    --diff-color: #9f6b40;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dff1f0;
+}
+.wisec {
+    --primary-color: #318181;
+    --light-color: #567d7d;
+    --lighter-color: #6f7878;
+    --diff-color: #9f6b40;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dff1f0;
+}
+.micro {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+}
+.doc {
+    --primary-color: #4f0a54;
+    --light-color: #815e87;
+    --lighter-color: #7c7380;
+    --diff-color: #6c7d0e;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c7b9cd;
+}
+.middleware {
+    --primary-color: #4f0a54;
+    --light-color: #815e87;
+    --lighter-color: #7c7380;
+    --diff-color: #6c7d0e;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c7b9cd;
+}
+.doceng {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.mm {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.ds-rt {
+    --primary-color: #407c96;
+    --light-color: #657985;
+    --lighter-color: #72777c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d6e1e9;
+}
+.mobicom {
+    --primary-color: #407c96;
+    --light-color: #657985;
+    --lighter-color: #72777c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d6e1e9;
+}
+.ec {
+    --primary-color: #4a5c70;
+    --light-color: #6d7785;
+    --lighter-color: #74767b;
+    --diff-color: #877455;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c9ced6;
+}
+
+.mobihoc {
+    --primary-color: #4a5c70;
+    --light-color: #6d7785;
+    --lighter-color: #74767b;
+    --diff-color: #877455;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c9ced6;
+}
+
+.eics {
+    --primary-color: #1975ae;
+    --light-color: #577b90;
+    --lighter-color: #697983;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4e2f4;
+}
+
+.mobisys {
+    --primary-color: #1975ae;
+    --light-color: #577b90;
+    --lighter-color: #697983;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4e2f4;
+}
+
+.esem {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+}
+
+.mod {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+}
+
+.esweek {
+    --primary-color: #154396;
+    --light-color: #6973ae;
+    --lighter-color: #757586;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c6e2;
+}
+
+.mswim {
+    --primary-color: #154396;
+    --light-color: #6973ae;
+    --lighter-color: #757586;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c6e2;
+}
+
+.sigcse {
+    --primary-color: #1975ae;
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+}
+
+.siggraph {
+    --primary-color: #33461c;
+    --light-color: #717a5d;
+    --lighter-color: #75776f;
+    --diff-color: #7e495f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c9bb;
+}
+
+.comm {
+    --primary-color: #c5422c;
+    --light-color: #b45f46;
+    --lighter-color: #887269;
+    --diff-color: #887269;
+    --nav-font-color: #333;
+    --dropdown-background-color: #ffd6c5;
+}
+
+.ite {
+    --primary-color: #c5422c;
+    --light-color: #b45f46;
+    --lighter-color: #887269;
+    --diff-color: #887269;
+    --nav-font-color: #333;
+    --dropdown-background-color: #ffd6c5;
+}
+
+.wsc {
+    --primary-color: #c5422c;
+    --light-color: #b45f46;
+    --lighter-color: #887269;
+    --diff-color: #ffd6c5s;
+    --nav-font-color: #333;
+    --dropdown-background-color: #ffd6c5;
+}
+
+.conext {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+
+.iticse {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+.wsdm {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+}
+.cpr {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.iui {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.www {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.cpsweek {
+    --primary-color: #6c2500;
+    --light-color: #9f684a;
+    --lighter-color: #83736a;
+    --diff-color: #004830;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9c0b0;
+}
+.jcdl {
+    --primary-color: #6c2500;
+    --light-color: #9f684a;
+    --lighter-color: #83736a;
+    --diff-color: #004830;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9c0b0;
+}
+.cscw {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.k-cap {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+}
+.cse {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+.kdd {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+}
+.dac {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+}
+.metrics {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+}
+.debs {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+}
+
+.glsvlsi, .fse, .islped, .gecco, .gis, .iccad, .ih-n-mmsec, .nossdav, .etra, .pads, .pepm, .pldi, .podc, .plop, .uccs, .foga, .pact, .fpga, .npar,
+.eurosys, .cgo, .bcb, .sac, .hpg, .sacmat, .ase, .icmi-mlmi, .spaa, .gpce, .popl, .group, .ppopp, .hotmobile, .recsys,
+.hpdc, .sensys, .hri, .tallip, .ht, .sbcci, .sc, .i3d, .sca, .icac, .sensys, .acm-se, .ice, .slip, .ancs, .icer, .soda, .apgv, .icfp, .sosp,
+.ase, .icmi-mlmi, .spaa, .asia-ccs, .icpe, .splash, .aspdac, .ics, .stoc, .asplos, .icse, .sui, .assets, .icuimc, .tei, .aus-ce, .ideas,
+.ubicomp, .c-n-c, .imc, .uist, .ccs, .ir, .valuetools, .cf, .isca, .vrst, .chi, .ismm, .web3d, .cikm, .ispd, .websci, .codaspy, .issta, 
+.wisec, .micro, .doc, .middleware, .doceng, .mm, .ds-rt, .mobicom, .ec, .mobihoc, .eics, .mobisys, .esem, .mod, .esweek, .mswim, .sigcse,
+.siggraph, .comm, .ite, .wsc, .conext, .iticse, .wsdm, .cpr, .iui, .www, .cpsweek, .jcdl, .cscw {
+    --nav-background-color: #d9d9d9;
+    --proceeding-background: var(--primary-color);
+    --banner-color: var(--primary-color);
+    --logo-color: var(--primary-color);
+    --badge-color: var(--primary-color);
+    --dropdown-border-color: var(--light-color);
+}

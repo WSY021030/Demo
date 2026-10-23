@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flight delay prediction based on LightGBM</title>
+<style>
+:root{color-scheme:light;--text:#17212f;--muted:#56657a;--line:#dbe1ea;--accent:#2067ae}
+*{box-sizing:border-box}body{background:#f5f6f8;color:var(--text);margin:0;
+font:16px/1.72 Georgia,'Times New Roman',serif}
+main{max-width:880px;margin:36px auto;padding:46px 58px;background:white;
+box-shadow:0 2px 24px #25344712;border-radius:8px}
+header{border-bottom:1px solid var(--line);padding-bottom:25px;margin-bottom:35px}
+header h1{font:700 31px/1.28 Georgia,serif;margin:0 0 12px}
+header .metadata{font:14px/1.6 system-ui,sans-serif;color:var(--muted)}
+section{margin:22px 0}h2,h3,h4,h5,h6{line-height:1.35;color:#17212f}
+h2{font-size:24px;margin:32px 0 14px}h3{font-size:20px;margin:27px 0 12px}
+h4{font-size:18px;margin:23px 0 10px}
+p.paper-paragraph{margin:12px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+figure{margin:24px 0;padding:14px 18px;border:1px solid var(--line);border-radius:7px}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto 12px}
+figcaption{font:14px/1.6 system-ui,sans-serif;color:var(--muted);margin-top:10px}
+.figure-label{font-weight:700;color:var(--text)}
+.asset-missing{font:14px system-ui,sans-serif;color:#9b402b;background:#fff6f0;padding:12px}
+.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font:14px/1.5 system-ui,sans-serif}
+th,td{border:1px solid #cfd9e3;padding:7px 10px;text-align:left}
+th{background:#edf3f8;font-weight:600}
+.equation{margin:20px 0;overflow-x:auto;background:#f7f8fa;border-radius:6px;padding:13px 16px}
+.equation pre{white-space:pre-wrap;word-break:break-word;font-size:14px;margin:0}
+.equation img.equation-svg{display:block;max-width:100%;width:auto;height:auto;margin:0 auto}
+.equation .fallback-note{font:12px system-ui,sans-serif;color:var(--muted);margin-bottom:6px}
+.equation .label{float:right;font:13px system-ui,sans-serif;color:var(--muted)}
+.source-mention{border-bottom:1px dotted #6f85a4;text-decoration:none;color:inherit}
+a.source-mention{color:var(--accent);cursor:pointer}
+.quality-notice{border-left:3px solid #c19048;background:#fffaf1;padding:12px 16px;
+font:13px/1.6 system-ui,sans-serif;color:#66502b}
+.paper-references{padding-left:24px;overflow-wrap:anywhere}
+.paper-references li{margin:6px 0}footer{font:12px/1.6 system-ui,sans-serif;
+border-top:1px solid var(--line);color:var(--muted);margin-top:40px;padding-top:15px}
+@media(max-width:700px){main{margin:0;padding:26px 20px;border-radius:0}header h1{font-size:25px}}
+</style>
+</head><body><main>
+<header>
+<h1>Flight delay prediction based on LightGBM</h1>
+<div class="metadata">Jiang Tao, Hua Man, Li Yanling · Source: IEEE</div></header>
+<section id="sec_001" data-level="1">
+<h2>Abstract</h2>
+<p class="paper-paragraph" id="para_0001" data-source-id="para_0001">With the rapid development of civil aviation industry, the number of flight delays continues to increase. Therefore, various airlines have an urgent need to predict the time of flight delays. The data used is from the data released by the US Bureau of Transportation Statistics (BST). The flight data of Atlanta Hartsfield-Jackson International Airport (ATL) is used as the research data. Data preprocessing is used to clean the data and extract the key data. This paper proposes to use the LightGBM algorithm to predict flight delays, and optimize the parameters of the model through grid search and cross-validation methods. The experimental results show that the LightGBM algorithm outperforms the comparative algorithms in terms of R-Squared, MAE, and training time metrics, exhibiting higher prediction accuracy and shorter training time compared to the XGBoost and GBDT algorithms.</p>
+</section>
+<section id="sec_002" data-level="1">
+<h2>Introduction</h2>
+<p class="paper-paragraph" id="para_0002" data-source-id="para_0002">According to the 2019 &quot;Global Airports and Airlines Punctuality Report&quot;, the actual number of flights departing from airports around the world in 2019 was about 37.12 million, with a punctual departure rate of 75.58%, and an average takeoff delay of 26.47 minutes. Among them, the actual number of flights departing from mainland China’s airports reached 4,802,300, with a punctual departure rate of 75.57%, and an average takeoff delay of 28.11 minutes. Flight delay not only disrupts passengers&#x27; time planning, but also brings a lot of negative effects, and affects subsequent flight schedule and the image of the company. Therefore, to predict the flight delay time, corresponding measures can be taken in advance to reduce or avoid the occurrence of the above situation, thereby reducing the impact of flight delays as much as possible.</p>
+<p class="paper-paragraph" id="para_0003" data-source-id="para_0003">Regarding the issue of flight delay prediction, domestic and foreign scholars have launched relevant research. Literature <a class="source-mention" href="#ref_001" data-mention-id="mention_0001" title="reference reference">[1]</a> proposed a flight arrival delay prediction based on a decision tree algorithm. Using data from a large domestic airport, a large number of experiments were designed, and the accuracy of the final prediction model was close to 80%. Literature <a class="source-mention" href="#ref_002" data-mention-id="mention_0002" title="reference reference">[2]</a> uses hidden Markov model and exponential smoothing forecasting method in the process of data mining to apply in delay prediction; Literature <a class="source-mention" href="#ref_003" data-mention-id="mention_0003" title="reference reference">[3]</a> cuts in from the aspect of delay chain spread, and proposes the delay of adopting Bayesian network method. The model can effectively predict the departure time and delay of downstream flights; literature <a class="source-mention" href="#ref_004" data-mention-id="mention_0004" title="reference reference">[4]</a> , <a class="source-mention" href="#ref_005" data-mention-id="mention_0005" title="reference reference">[5]</a> proposed a delay prediction model based on the support vector machine regression method, and the results can effectively predict flight delays. Literature <a class="source-mention" href="#ref_006" data-mention-id="mention_0006" title="reference reference">[6]</a> mainly addresses the problem of large amount of flight delay prediction data and difficulty in feature extraction, and proposes a flight delay prediction model based on dual-channel convolutional neural network (DCNN) with an accuracy rate of 92.1%. Literature <a class="source-mention" href="#ref_007" data-mention-id="mention_0007" title="reference reference">[7]</a> is based on the time series forecasting algorithm and adopts the ARIMA model. The experimental results show that the model has a good effect on flight delay prediction. Literature <a class="source-mention" href="#ref_008" data-mention-id="mention_0008" title="reference reference">[8]</a> uses a new multi-layer input layer neural network algorithm. This method predicts delayed flights at Kennedy Airport. It is compared with the traditional gradient descent back-propagation neural network model. The time required to train the neural network model is better than the traditional backpropagation method. Literature <a class="source-mention" href="#ref_009" data-mention-id="mention_0009" title="reference reference">[9]</a> detailed the source of the GBDT model. The core of the algorithm is to fit the current decision tree by learning the residuals of the previous decision tree. Literature <a class="source-mention" href="#ref_010" data-mention-id="mention_0010" title="reference reference">[10]</a> introduced an emerging deep machine learning optimization algorithm. The limit gradient boosting (XGBoost) algorithm can adapt to complex nonlinear relationships. The model has better parallel processing capabilities and can effectively solve the problem of overfitting. Literature <a class="source-mention" href="#ref_011" data-mention-id="mention_0011" title="reference reference">[11]</a> proposed a LightGBM model based on the upgrade of the XGBoost model. LightGBM adopts a leaf-wise split strategy, which refers to selecting the node with the largest classification gain among all current leaf nodes for splitting, which greatly reduces the training time of the model.</p>
+<p class="paper-paragraph" id="para_0004" data-source-id="para_0004">This study will combine the data from the BST website to analyze the impact of each feature on flight delays, and select features that have a higher impact on flight delays. LightGBM based on the tree model has the following five advantages: (1) faster training speed; (2) better model accuracy; (3) lower memory consumption; (4) supports parallel learning; (5) can process massive amounts of data quickly. Then based on the algorithm, a flight delay prediction model is constructed, and the experimental data used in the model is preprocessed and feature engineering. In the experimental part, the parameter optimization of the model is achieved through the grid search method. The experimental results show that, compared with the XGBoost and GBDT, the LightGBM model has more accurate predictions and less training time, which can provide valuable reference for the study of flight delay prediction.</p>
+</section>
+<section id="sec_003" data-level="1">
+<h2>Flight delay prediction based on LightGBM</h2>
+<section id="sec_004" data-level="2">
+<h3>A. Introduction to LightGBM algorithm</h3>
+<p class="paper-paragraph" id="para_0005" data-source-id="para_0005">LightGBM is an open source, fast, and efficient improvement framework based on decision tree algorithms, supporting efficient parallel training.</p>
+<p class="paper-paragraph" id="para_0006" data-source-id="para_0006">Gradient Boosting: Iterate variables once, increase the sub-models one by one during the iterative process, and ensure that the loss function continues to decrease.</p>
+<p class="paper-paragraph" id="para_0007" data-source-id="para_0007">Suppose f i ( X ) is set as a sub-model, and the composite model is</p>
+<div class="equation" id="equation_0001" data-kind="equation"><span class="label"></span><img class="equation-svg" src="assets/equation_0001.svg" alt="\begin{equation*}{f_i}(x) = {\partial _0}{f_0}(x) + {\partial _1}{f_1}(x) + \cdots + {\partial _m}{f_m}(x)\end{equation*}"></div>
+<p class="paper-paragraph" id="para_0008" data-source-id="para_0008">The loss function is L [ F m ( x ), Y ], and every iteration and a new sub-model is added, the loss function continuously decreases toward the gradient of the variable with the second highest information content. L [ F m ( x ) , Y ] &lt; L [ F m − 1 ( x ) , Y ]</p>
+<p class="paper-paragraph" id="para_0009" data-source-id="para_0009">GBDT (Gradient Boosting Decision Tree) is a classic model, namely</p>
+<div class="equation" id="equation_0002" data-kind="equation"><span class="label"></span><img class="equation-svg" src="assets/equation_0002.svg" alt="\begin{equation*}GBDT = GradientBoosting + DecisionTree.\end{equation*}"></div>
+<p class="paper-paragraph" id="para_0010" data-source-id="para_0010">GBDT has the functional characteristics of gradient boosting and decision tree, and has the advantages of excellent training effect and not easy to overfit. LightGBM is a kind of GBDT, which is used to solve the problems encountered by GBDT in massive data processing.</p>
+<p class="paper-paragraph" id="para_0011" data-source-id="para_0011">The decision tree sub-model in LightGBM uses the method of splitting nodes by leaves, so its computational cost is relatively small. Because of this split method, it is necessary to control the minimum amount of data and the tree for each leaf node. In order to avoid the occurrence of over-fitting phenomenon, LightGBM chose a decision tree algorithm based on histogram to divide the feature value into many small &quot;buckets&quot;, and then look for splits on these &quot;buckets&quot;, which can reduce computing costs and storage costs. In addition, the processing of category features also enables LightGBM to have a better improvement under specific data.</p>
+</section>
+<section id="sec_005" data-level="2">
+<h3>B. Construction of flight delay prediction model</h3>
+<p class="paper-paragraph" id="para_0012" data-source-id="para_0012">Firstly, the data is preprocessed, features are selected by embedding method, and features useful for model prediction accuracy are screened out, the selected data set is used as the input data set of the final model, and the data set is divided into training set and test set, Use the grid search method to find out the parameter combination that makes the model prediction optimal, use the LightGBM algorithm to train the training set to generate the model and then use the test set to predict. The specific process is shown in <a class="source-mention" href="#fig_0001" data-mention-id="mention_0012" title="figure reference">Figure 1</a> below.</p>
+<figure id="fig_0001" data-kind="figure"><img loading="lazy" src="assets/asset_0001.gif" alt="Fig. 1. - 
+Flight delay prediction process based on LightGBM
+"><figcaption><span class="figure-label">Fig. 1.</span> Flight delay prediction process based on LightGBM</figcaption></figure>
+</section>
+</section>
+<section id="sec_006" data-level="1">
+<h2>Data acquisition, processing and analysis</h2>
+<section id="sec_007" data-level="2">
+<h3>A. Data preprocessing</h3>
+<p class="paper-paragraph" id="para_0013" data-source-id="para_0013">The data used in this article are all downloaded from the BST website. The website mainly stores flight data from 1987 to the present. This article selects the U.S. flight data for the entire year of 2018 as an experiment. The amount of data is huge. Considering that large airports are less likely to cause delays due to their own reasons, so the Atlanta Hartsfield-Jackson International Airport (ATL) was selected as the departure airport, 23,665 sample data were collected from Los Angeles International Airport(LAX), Seattle-Tacoma International Airport(SEA), O&#x27;Hare International Airport(ORD), JFK International Airport(JFK), San Francisco International Airport (SFO) as destinations. Each sample contains 27 characteristics such as planned arrival time, distance from airport of departure, flight date, airline code, departure and destination airport code, planned departure time, actual departure time, actual arrival time and so on. Considering that the month is an important feature of the weather, the text data of the flight date is split and converted into a numeric value of year, month, and day.</p>
+<section id="sec_008" data-level="3">
+<h4>(1) Missing value processing</h4>
+<p class="paper-paragraph" id="para_0014" data-source-id="para_0014">Through the inspection of the data, it is found that the missing value is included when the planned arrival and departure time is equal to the actual arrival and departure time, the arrival and departure delay is a null value missing, the missing value is compensated by 0, and the average value is used to fill in the null value of the taxi time of arrival. For other samples with missing values, the proportion is very small, so the samples with null values are directly deleted.</p>
+</section>
+<section id="sec_009" data-level="3">
+<h4>(2) Data encoding and conversion</h4>
+<p class="paper-paragraph" id="para_0015" data-source-id="para_0015">The non-numerical part of the data often needs to be re-encoded. The data in this article contains 15 airlines. The delay rate of each company is different, and the delay rate of low-cost airlines is often relatively high. Therefore, the airline code needs to be coded in an orderly manner. The delay rate of the airline company is arranged in order from small to large, and the airline code in the data is replaced with 1 to 15.</p>
+</section>
+</section>
+<section id="sec_010" data-level="2">
+<h3>B. Feature selection</h3>
+<p class="paper-paragraph" id="para_0016" data-source-id="para_0016">It is very important to select features that are useful for the flight prediction results. If the features include irrelevant feature attributes, the accuracy of the algorithm will be reduced. The embedding method is a method that allows the algorithm to decide which features to use, meaning that the algorithm training and feature selection are performed at the same time. First, LightGBM model is used for training, and the weight coefficient of each feature is obtained. The weight coefficient indicates the importance of the feature to some aspects of the model. The threshold parameter is set in sklearn using the SelectFromModel method and features below this threshold are considered unwanted to the model, the threshold set for the experiment is 0.001 and the final selection is made as shown in <a class="source-mention" href="#table_0001" data-mention-id="mention_0013" title="table reference">Table I</a> below.</p>
+<figure id="table_0001" data-kind="table" data-representation="image_only"><img loading="lazy" src="assets/asset_0002.gif" alt="Feature field explanation"><figcaption><span class="figure-label">TABLE I.</span> Feature field explanation</figcaption></figure>
+</section>
+</section>
+<section id="sec_011" data-level="1">
+<h2>Experiment and result analysis</h2>
+<p class="paper-paragraph" id="para_0017" data-source-id="para_0017">The LightGBM algorithm is an integrated algorithm that aggregates the results of all decision trees by building multiple decision trees on the data. There are many parameters in the algorithm model. In order to find the best combination of parameters, a grid search cross-validation method is used. Grid search refers to the exhaustive list of parameters. All possible values of the parameters are arranged and combined to obtain all the combined results, and then the results of each combination are used for LightGBM training, and cross-validation is used to evaluate the test set data. The parameter value with the highest score is obtained through the scoring function, and finally the optimal parameter combination among all parameter combinations is obtained. GridSearchCV is used in scikit-learn to realize the adjustment and evaluation of the parameters, and the optimal parameters are obtained as shown in <a class="source-mention" href="#table_0002" data-mention-id="mention_0014" title="table reference">Table II</a> below.</p>
+<figure id="table_0002" data-kind="table" data-representation="image_only"><img loading="lazy" src="assets/asset_0003.gif" alt="Optimal parameter value"><figcaption><span class="figure-label">TABLE II.</span> Optimal parameter value</figcaption></figure>
+<p class="paper-paragraph" id="para_0018" data-source-id="para_0018">The preprocessed data samples are divided into 30% test sample set and 70% training sample set. The established model is used to train the training sample set and forecast the test set. The R-squared is 0.988849, the mean absolute error (MAE) is 3.98 minutes, and the training time is 63ms. Finally, XGBOOST algorithm and GBDT algorithm are used to predict with the same data set, and the following <a class="source-mention" href="#table_0003" data-mention-id="mention_0015" title="table reference">table III</a> is obtained.</p>
+<p class="paper-paragraph" id="para_0019" data-source-id="para_0019">Among them, the closer the R-Squared value is to 1, the closer the predicted value is to the true value; the MAE value can better reflect the deviation between the predicted value and the true value; the shorter the training time, the faster the algorithm runs. The results show that the LightGBM used in this paper has higher prediction accuracy and shorter training time.</p>
+<figure id="table_0003" data-kind="table" data-representation="image_only"><img loading="lazy" src="assets/asset_0004.gif" alt="Comparison of algorithm results"><figcaption><span class="figure-label">TABLE III.</span> Comparison of algorithm results</figcaption></figure>
+</section>
+<section id="sec_012" data-level="1">
+<h2>Conclusion</h2>
+<p class="paper-paragraph" id="para_0020" data-source-id="para_0020">This paper proposes a flight delay prediction model based on the LightGBM algorithm. First, it analyzes the features that have a great impact on flight prediction, which will affect the five major international airports such as (ATL) and Kennedy International Airport (JFK) in the United States. The flight data of the whole year in 2018 are preprocessed and feature engineering is carried out, and the method of combining grid search and cross-validation is used to optimize the parameters of the model. The data is randomly divided into training set and test set, and finally prediction is made on the test set. It shows that R-Squared is 0.9748490, and the mean absolute error (MAE) is 4.57 minutes. Compared with the GBDT and XGBoost algorithms, LightGBM algorithm is superior to comparison algorithm in R-squared, MAE and training time index, showing a higher prediction accuracy. In fact, there are many factors that affect flight delays, and the model in this article still has a lot of room for improvement, such as adding features like statutory holidays and weather to the data set to further improve the prediction accuracy of the algorithm model.</p>
+</section>
+<section id="references"><h2>References</h2><ol class="paper-references">
+<li id="ref_001">Cheng Hua, Li Yanmei, Luo Qian, et al.. Research on arrival flight delay prediction based on C4.5 decision tree method[J]. System Engineering Theory and Practice , 2014, 34 ( 1 ): 239–247.</li>
+<li id="ref_002">Luo Feng&#x27;e, Zhang Chengwei. Flight delay forecast analysis based on time series data mining[J]. Modern Electronic Technology , 2014, 37 ( 24 ): 52–55.</li>
+<li id="ref_003">Cao Weidong, Lin Xiangyu. Flight overtime analysis and delay prediction based on Bayesian network[J]. Computer Engineering and Design , 2011, 32 ( 5 ): 1170–1172.</li>
+<li id="ref_004">Rebollo J J, Balakrishnan H. Characterization and Prediction of Air Traffic Delays[J]. Transportation Research Part C: Emerging Technologies , 2014.</li>
+<li id="ref_005">Luo Yunqian, Chen Zhijie, Tang Jinhui, et al.. Research on flight delay prediction using support vector machine regression [J]. Transportation System Engineering and Information , 2015, 15 ( 1 ): 143–149.</li>
+<li id="ref_006">Wu Renbiao, Li Jiayi, Qu Jingyi. Flight delay prediction model based on dual-channel convolutional neural network[J]. Computer Applications , 2018, 38 ( 07 ): 2100–2106+2112.</li>
+<li id="ref_007">Mo Fan, Zhao Zheng, Yin Taoran. Research on Airport Flight Delay Forecast Technology Based on ARIMA Model[J]. Aviation Computing Technology , 2018, 48 ( 03 ): 68–73.</li>
+<li id="ref_008">Sina Khanmohammadi, Salih Tutun, Yunus Kucuk. A New Multilevel Input Layer Artificial Neural Network for Predicting Flight Delays at JFK Airport [J]. Elsevier B.V. , 2016, 95.</li>
+<li id="ref_009">Jerome H. Friedman. Greedy function approximation: A gradient boosting machine. [J]. The Annals of Statistics , 2001, 29 ( 5 ).</li>
+<li id="ref_010">Chen T Q, Guestrin C. Xgboost:A scalable tree boosting system // Proceedings of the 22nd acm sigkdd internation conference on knowledge discovery and data mining-KDD’16. San Francisco : ACM Press the 22nd ACM SIGKDD International Conference, 2016 : 785–794.</li>
+<li id="ref_011">Ke G, Meng Q, Finley T, et al.. Lightgbm: A highly efficient gradient boosting decision tree[C] // Advances in neural information processing systems. 2017 : 3146–3154.</li>
+</ol></section>
+<footer>Document ID: ieee_9633431 · Revision: sha256:8f3d2b94253d91f5d920656bcd30ef51a5ab3947f1f88d4e86ca4c473060e47d
+ · Generated from user-provided HTML. Scripts from the original site are excluded.</footer>
+</main></body></html>

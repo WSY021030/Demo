@@ -1,0 +1,27 @@
+{
+  "export_schema": "paper-export.v1",
+  "paper_id": "arxiv_2404_16130",
+  "paper_revision": "sha256:229e4407414e2d79446ad844f25067d2602e401d3c22732bf1c8580ac6d42546",
+  "source_url": "https://arxiv.org/html/2404.16130",
+  "source_html_sha256": "sha256:229e4407414e2d79446ad844f25067d2602e401d3c22732bf1c8580ac6d42546",
+  "paper_json_sha256": "sha256:00a5fc5c49599f48bf2bc5820c39ec66436296a63d697b8bb62f0e80b8e371d0",
+  "normalized_html_sha256": "sha256:1f41266a3d6583da8e6690a1592e3ba3a3f5dadd09fe3405a52b8ac061ebe1dc",
+  "asset_counts": {
+    "total": 4,
+    "copied": 4,
+    "missing": 0,
+    "skipped_unsafe_or_unsupported": 0
+  },
+  "equation_rendering": {
+    "total": 0,
+    "rendered": 0,
+    "fallback": 0
+  },
+  "quality": {
+    "body": "complete",
+    "figures": "complete",
+    "tables": "complete",
+    "references": "complete",
+    "warnings": []
+  }
+}

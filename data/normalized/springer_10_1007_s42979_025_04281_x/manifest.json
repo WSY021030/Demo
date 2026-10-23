@@ -1,0 +1,28 @@
+{
+  "export_schema": "paper-export.v1",
+  "paper_id": "springer_10_1007_s42979_025_04281_x",
+  "paper_revision": "4fee50ab3625809e",
+  "source_url": "https://link.springer.com/article/10.1007/s42979-025-04281-x",
+  "source_html_sha256": "sha256:19c41d55e62d32246dd6cb52f78e5ad8aeb0451224e82ed48362f316db583d3f",
+  "paper_json_sha256": "sha256:62c276f267df2aadf5562ca15cea7c7bfeaabc296deb891fc1bb2eaf63d9b6e4",
+  "normalized_html_sha256": "sha256:d4b34b202695858c2d94d9be9150f153e4ae3270ffb3bff85946699ae3921aac",
+  "asset_counts": {
+    "total": 4,
+    "copied": 4,
+    "missing": 0,
+    "skipped_unsafe_or_unsupported": 0
+  },
+  "equation_rendering": {
+    "total": 3,
+    "rendered": 3,
+    "native_mathml": 3,
+    "fallback": 0
+  },
+  "quality": {
+    "body": "complete",
+    "figures": "complete",
+    "tables": "complete",
+    "references": "complete",
+    "warnings": []
+  }
+}

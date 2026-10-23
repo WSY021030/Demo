@@ -1,0 +1,27 @@
+{
+  "export_schema": "paper-export.v1",
+  "paper_id": "ieee_9633431",
+  "paper_revision": "sha256:8f3d2b94253d91f5d920656bcd30ef51a5ab3947f1f88d4e86ca4c473060e47d",
+  "source_url": "https://ieeexplore.ieee.org/document/9633431/references",
+  "source_html_sha256": "sha256:51885b5768c43fd26c159a8d9f134d7e73270feadb8826c632e39864a70c5f76",
+  "paper_json_sha256": "sha256:83e4e27ab7e2951ca9a76212488c728aed700b0fa1ce930ece60be1380483308",
+  "normalized_html_sha256": "sha256:24e8bcc67da5c4750a1b17d6f115515f50e6dcb9516f8dfa4cadeee8f7322543",
+  "asset_counts": {
+    "total": 4,
+    "copied": 4,
+    "missing": 0,
+    "skipped_unsafe_or_unsupported": 0
+  },
+  "equation_rendering": {
+    "total": 2,
+    "rendered": 2,
+    "fallback": 0
+  },
+  "quality": {
+    "body": "complete",
+    "figures": "complete",
+    "tables": "partial",
+    "references": "complete",
+    "warnings": []
+  }
+}

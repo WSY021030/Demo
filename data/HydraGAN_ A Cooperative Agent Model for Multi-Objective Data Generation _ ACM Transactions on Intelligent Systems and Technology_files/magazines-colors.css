@@ -1,0 +1,80 @@
+.cacm {
+    --primary-color: #4a7d96;
+    --light-color: #567b8e;
+    --lighter-color: #647a85;
+    --diff-color: #91714a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #bce5f8;
+}
+
+.cie {
+    --primary-color: #51666f;
+    --light-color: #647a83;
+    --lighter-color: #71777a;
+    --diff-color: #85745f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c8d3d8;
+}
+
+.elearn {
+    --primary-color: #1d6aa0;
+    --light-color: #4f7b9b;
+    --lighter-color: #657987;
+    --diff-color: #a86815;
+    --nav-font-color: #333;
+    --dropdown-background-color: #a0c1d7;
+}
+
+.inroads {
+    --primary-color: #4455a3;
+    --light-color: #6272bd;
+    --lighter-color: #6f7590;
+    --diff-color: #8f7330;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b7c1ec;
+}
+
+.interactions {
+    --primary-color: #4c4c4c;
+    --light-color: #707070;
+    --lighter-color: #767676;
+    --diff-color: #487c9b;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e1e1e1;
+}
+
+.queue {
+    --primary-color: #047552;
+    --light-color: #45a69e;
+    --lighter-color: #b5dbd8;
+    --diff-color: #fe8544;
+    --nav-font-color: #ffffffde;
+	--banner: url(/specs/products/acm/releasedAssets/images/magazine-banner-inner--queue-colors.svg);
+	--banner-sm: url(/specs/products/acm/releasedAssets/images/magazine-banner-mobile--queue-colors.svg);
+}
+
+.ubiquity {
+    --primary-color: #607038;
+    --light-color: #707c45;
+    --lighter-color: #747866;
+    --diff-color: #83477a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dee6c3;
+}
+
+.xrds {
+    --primary-color: #bd3a44;
+    --light-color: #cc4953;
+    --lighter-color: #906e71;
+    --diff-color: #428529;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f5babf;
+}
+
+.cacm, .cie, .elearn, .inroads, .interactions, .queue, .ubiquity, .xrds{
+    --nav-background-color: #d9d9d9;
+    --banner-color: var(--primary-color);
+    --logo-color: var(--primary-color);
+    --badge-color: var(--primary-color);
+    --dropdown-border-color: var(--light-color);
+}

@@ -1,0 +1,365 @@
+.sigir {
+    --primary-color: #926e42;
+    --light-color: #927222;
+    --lighter-color: #827819;
+    --diff-color: #304e62;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d02b;
+  }
+  
+  .sigada {
+    --primary-color: #2f7d2f;
+    --light-color: #54814d;
+    --lighter-color: #71796d;
+    --diff-color: #803838;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dbecd4;
+  }
+  
+  .sigarch {
+    --primary-color: #005b6f;
+    --light-color: #3d7f92;
+    --lighter-color: #6b797e;
+    --diff-color: #b35900;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b6ced6;
+  }
+  
+  .sigai {
+    --primary-color: #3b6963;
+    --light-color: #657b79;
+    --lighter-color: #727777;
+    --diff-color: #a4684a;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c9d3d3;
+  }
+  
+  .sigapp {
+    --primary-color: #a02a1c;
+    --light-color: #a86551;
+    --lighter-color: #86726a;
+    --diff-color: #457852;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7c6b8;
+  }
+  
+  .sigbio {
+    --primary-color: #317f90;
+    --light-color: #5d7b85;
+    --lighter-color: #70787c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9eaf0;
+  }
+  
+  .sigevo {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+  }
+  
+  .siggraph {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+  }
+  
+  .sigcas {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+  }
+  
+  .sigchi {
+    --primary-color: #8a5f0f;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #757582;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+  }
+  
+  .sigbed {
+    --primary-color: #9163aa;
+    --light-color: #846f91;
+    --lighter-color: #7a7480;
+    --diff-color: #747a57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e0d6eb;
+  }
+  
+  .sigcse {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+  }
+  
+  .siglog {
+    --primary-color: #177e25;
+    --light-color: #5b7f56;
+    --lighter-color: #70796d;
+    --diff-color: #c4524d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9ebd3;
+  }
+  
+  .sigda {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+  }
+  
+  .sigdoc {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+  }
+  
+  .sigecom {
+    --primary-color: #037fa8;
+    --light-color: #0580a7;
+    --lighter-color: #517c90;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #7fc3e1;
+  }
+  
+  .siggraph {
+    --primary-color: #33461c;
+    --light-color: #717a5d;
+    --lighter-color: #75776f;
+    --diff-color: #7e495f;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c5c9bb;
+  }
+  
+  .sighpc {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+  }
+  
+  .search-result--tile {
+    --primary-color: #1975ae;
+  }
+  
+  .sigite, .sigcite {
+    --primary-color: #047e63;
+    --light-color: #507f72;
+    --lighter-color: #6e7975;
+    --diff-color: #a9663d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #caddd5;
+  }
+  
+  .sigkdd {
+    --primary-color: #a0501b;
+    --light-color: #9c6c4d;
+    --lighter-color: #82746a;
+    --diff-color: #116655;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e7cfbc;
+  }
+  
+  .sigcse {
+    --primary-color: #1975ae;
+    --light-color: #4c7d8f;
+    --lighter-color: #647a83;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #b2d9e8;
+  }
+  
+  .sigmetrics {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+  }
+  
+  .sigmicro {
+    --primary-color: #d53247;
+    --light-color: #bf5556;
+    --lighter-color: #86726f;
+    --diff-color: #5e7f53;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbd6d0;
+  }
+  
+  .sigmis {
+    --primary-color: #00509e;
+    --light-color: #6275ab;
+    --lighter-color: #737686;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4c9e3;
+  }
+  
+  .sigspatial {
+    --primary-color: #00509e;
+    --light-color: #6275ab;
+    --lighter-color: #737686;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c4c9e3;
+  }
+  
+  .sigmm {
+    --primary-color: #318181;
+    --light-color: #567d7d;
+    --lighter-color: #6f7878;
+    --diff-color: #9f6b40;
+    --nav-font-color: #333;
+    --dropdown-background-color: #dff1f0;
+  }
+  
+  .sigmobile {
+    --primary-color: #c5422c;
+    --light-color: #b45f46;
+    --lighter-color: #887269;
+    --diff-color: #887269;
+    --nav-font-color: #333;
+    --dropdown-background-color: #ffd6c5;
+  }
+  
+  .sigmod {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+  }
+  
+  .sigaccess {
+    --primary-color: #0068a7;
+    --light-color: #427ca3;
+    --lighter-color: #6b7883;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c1d9ec;
+  }
+  
+  .sigops {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+  }
+  
+  .sigplan {
+    --primary-color: #6c2500;
+    --light-color: #9f684a;
+    --lighter-color: #83736a;
+    --diff-color: #004830;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9c0b0;
+  }
+  
+  .sigcomm {
+    --primary-color: #6c2500;
+    --light-color: #9f684a;
+    --lighter-color: #83736a;
+    --diff-color: #004830;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d9c0b0;
+  }
+  
+  .sigsac {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+  }
+  
+  .sigsam {
+    --primary-color: #8c5a2c;
+    --light-color: #907150;
+    --lighter-color: #807569;
+    --diff-color: #427e92;
+    --nav-font-color: #333;
+    --dropdown-background-color: #fbe5cf;
+  }
+  
+  .sigsim {
+    --primary-color: #74767b;
+    --light-color: #75767c;
+    --lighter-color: #74767d;
+    --diff-color: #797670;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d7dce8;
+  }
+  
+  .sigsoft {
+    --primary-color: #827429;
+    --light-color: #7f7753;
+    --lighter-color: #79776b;
+    --diff-color: #6c5f8d;
+    --nav-font-color: #333;
+    --dropdown-background-color: #e4dfca;
+  }
+  
+  .sigact {
+    --primary-color: #4f0a54;
+    --light-color: #815e87;
+    --lighter-color: #7c7380;
+    --diff-color: #6c7d0e;
+    --nav-font-color: #333;
+    --dropdown-background-color: #c7b9cd;
+  }
+  
+  .siguccs {
+    --primary-color: #cc1962;
+    --light-color: #966b71;
+    --lighter-color: #857274;
+    --diff-color: #647e57;
+    --nav-font-color: #333;
+    --dropdown-background-color: #f2cfd3;
+  }
+  
+  .sigweb {
+    --primary-color: #407c96;
+    --light-color: #657985;
+    --lighter-color: #72777c;
+    --diff-color: #a16b32;
+    --nav-font-color: #333;
+    --dropdown-background-color: #d6e1e9;
+  }
+  
+  .sigir,.sigada,.sigarch,.sigai, .sigapp,.sigbio,.sigevo,.siggraph,.sigcas,.sigchi,.sigbed,.sigcse,.siglog,.sigda,.sigdoc,.sigecom,.siggraph,
+  .sighpc,.sigcite,.sigite,.sigkdd,.sigcse,.sigmetrics,.sigmicro,.sigmis,.sigspatial,.sigmm,.sigmobile,.sigmod,.sigaccess,.sigops,.sigplan,.sigcomm,
+  .sigsac,.sigsam,.sigsim,.sigsoft,.sigact,.siguccs,.sigweb {
+    --nav-background-color: #d9d9d9;
+    --banner-color: var(--primary-color);
+    --logo-color: var(--primary-color);
+    --badge-color: var(--primary-color);
+    --dropdown-border-color: var(--light-color);
+  }
+  

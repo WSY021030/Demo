@@ -1,0 +1,1307 @@
+{
+  "pipeline": "reader_v2",
+  "pipeline_report": {
+    "pipeline": "reader_v2",
+    "trace": [
+      "validate_request",
+      "prepare_selection",
+      "claim_agent",
+      "evidence_agent",
+      "mapping_agent",
+      "reviewer_agent",
+      "reasoning_path_agent",
+      "conclusion_agent"
+    ],
+    "claim_calls_are_batched": true,
+    "evidence_candidate_rounds": 1,
+    "mapping_rounds": 1,
+    "gap_repair_rounds": 0,
+    "mapping_claim_diagnostic_count": 0,
+    "document_mode": null,
+    "unexpanded_mapping_targets": []
+  },
+  "claim_results": [
+    {
+      "claim_id": "claim_001",
+      "claim_text": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+      "source_quote": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+      "claim_type": "statement",
+      "evidence_policy": "source_report",
+      "source_element_id": "S-sec-5-4.P1",
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P1",
+        "selector": {
+          "type": "text_span",
+          "start": 195,
+          "end": 399,
+          "exact": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+          "prefix": "to evaluate the set of metrics. ",
+          "suffix": " Corresponding to the metrics we"
+        }
+      },
+      "evidence_links": [],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [],
+      "evidence_search_note": "No linked evidence identified in this run."
+    },
+    {
+      "claim_id": "claim_002",
+      "claim_text": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+      "source_quote": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "S-sec-5-4.P1",
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P1",
+        "selector": {
+          "type": "text_span",
+          "start": 400,
+          "end": 603,
+          "exact": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+          "prefix": "a under the Radar Chart (AuRC). ",
+          "suffix": " Each metric is normalized to th"
+        }
+      },
+      "evidence_links": [
+        {
+          "relation_id": "relation_001",
+          "relation_type": "supports",
+          "source_id": "evidence_001",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.9,
+          "evidence_id": "evidence_001",
+          "evidence_type": "table",
+          "source_element_id": "S-sec-5-4.T1",
+          "source_anchors": [
+            {
+              "element_id": "S-sec-5-4.T1",
+              "selector": {
+                "type": "table_cells",
+                "cell_ids": [
+                  "S-sec-5-4.T1.R0C2",
+                  "S-sec-5-4.T1.R0C3",
+                  "S-sec-5-4.T1.R0C4",
+                  "S-sec-5-4.T1.R0C5",
+                  "S-sec-5-4.T1.R0C6"
+                ]
+              }
+            }
+          ],
+          "verification_level": "table_cells",
+          "source_table_number": null,
+          "grounded_values": [
+            {
+              "cell_id": "S-sec-5-4.T1.R0C2",
+              "path": [
+                "grid",
+                "cells",
+                2,
+                "text"
+              ],
+              "value": "EM",
+              "description": "Header cell naming EM (EM distance) as a metric/column."
+            },
+            {
+              "cell_id": "S-sec-5-4.T1.R0C3",
+              "path": [
+                "grid",
+                "cells",
+                3,
+                "text"
+              ],
+              "value": "RA",
+              "description": "Header cell naming RA (retained accuracy) as a metric/column."
+            },
+            {
+              "cell_id": "S-sec-5-4.T1.R0C4",
+              "path": [
+                "grid",
+                "cells",
+                4,
+                "text"
+              ],
+              "value": "RE",
+              "description": "Header cell naming RE (re-identification error) as a metric/column."
+            },
+            {
+              "cell_id": "S-sec-5-4.T1.R0C5",
+              "path": [
+                "grid",
+                "cells",
+                5,
+                "text"
+              ],
+              "value": "TA",
+              "description": "Header cell naming TA (target accuracy) as a metric/column."
+            },
+            {
+              "cell_id": "S-sec-5-4.T1.R0C6",
+              "path": [
+                "grid",
+                "cells",
+                6,
+                "text"
+              ],
+              "value": "DI",
+              "description": "Header cell naming DI (diversity) as a metric/column."
+            }
+          ],
+          "visual_observations": []
+        },
+        {
+          "relation_id": "relation_003",
+          "relation_type": "supports",
+          "source_id": "evidence_003",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.9,
+          "evidence_id": "evidence_003",
+          "evidence_type": "figure",
+          "source_element_id": "S-sec-5-5.F1",
+          "source_anchors": [
+            {
+              "element_id": "S-sec-5-5.F1",
+              "selector": {
+                "type": "element"
+              }
+            }
+          ],
+          "verification_level": "image_observation",
+          "source_table_number": null,
+          "grounded_values": [],
+          "visual_observations": [
+            {
+              "asset_id": "A4",
+              "observation": "Radar charts for six datasets with spokes labeled by five performance objectives (RA, EM, DI, RE, TA).",
+              "region_description": "Six small radar plots arranged in 2 columns x 3 rows; spoke labels visible near plot edges (RA, EM, DI, RE, TA).",
+              "legibility": "readable",
+              "bbox": null,
+              "source_path": "assets/A4.jpg",
+              "source_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+              "sent_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+              "model": "gpt-5-mini-2025-08-07",
+              "source_verified": true,
+              "reading_verified": false
+            }
+          ]
+        }
+      ],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [
+        {
+          "path_id": "reader_path_001",
+          "node_ids": [
+            "evidence_001",
+            "claim_002"
+          ],
+          "relation_ids": [
+            "relation_001"
+          ],
+          "path_role": "secondary",
+          "explanation": "The table cells enumerate the metric labels EM, RA, RE, TA, DI. That directly corresponds to the claim’s list of radar-chart spokes and thus substantiates the claim that these specific metrics are the ones represented. This is supporting but a tabular list is less direct evidence of the visual “spokes” than the figure itself, so it is marked secondary.",
+          "gap_description": null
+        },
+        {
+          "path_id": "reader_path_002",
+          "node_ids": [
+            "evidence_003",
+            "claim_002"
+          ],
+          "relation_ids": [
+            "relation_003"
+          ],
+          "path_role": "primary",
+          "explanation": "The figure image observation explicitly describes radar plots with spokes labeled RA, EM, DI, RE, TA. That visually demonstrates that the radar-chart spokes represent those metrics and is the most direct piece of evidence for the claim about the chart spokes.",
+          "gap_description": null
+        }
+      ],
+      "evidence_search_note": null
+    },
+    {
+      "claim_id": "claim_003",
+      "claim_text": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+      "source_quote": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_element_id": "S-sec-5-4.P2",
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P2",
+        "selector": {
+          "type": "text_span",
+          "start": 128,
+          "end": 342,
+          "exact": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+          "prefix": "multi-objective synthetic data. ",
+          "suffix": ""
+        }
+      },
+      "evidence_links": [
+        {
+          "relation_id": "relation_002",
+          "relation_type": "supports",
+          "source_id": "evidence_002",
+          "source_verified": false,
+          "source_integrity_status": "rejected",
+          "source_integrity_note": null,
+          "confidence": 0.88,
+          "evidence_id": "evidence_002",
+          "evidence_type": "table",
+          "source_element_id": "S-sec-5-4.T1",
+          "source_anchors": [],
+          "verification_level": null,
+          "source_table_number": null,
+          "grounded_values": [
+            {
+              "cell_id": "S-sec-5-4.T1.R0C9",
+              "path": [
+                "grid",
+                "cells",
+                9,
+                "text"
+              ],
+              "value": "AuRC",
+              "description": "Header cell showing AuRC (Area under the Radar Chart) as a column in the comparative results table, representing the unifying metric."
+            },
+            {
+              "cell_id": "S-sec-5-4.T1.R1C9",
+              "path": [
+                "grid",
+                "cells",
+                19,
+                "text"
+              ],
+              "value": "0.31",
+              "description": "Example AuRC value provided in the table (illustrates that AuRC is computed and reported)."
+            }
+          ],
+          "visual_observations": []
+        },
+        {
+          "relation_id": "relation_004",
+          "relation_type": "supports",
+          "source_id": "evidence_004",
+          "source_verified": true,
+          "source_integrity_status": "verified",
+          "source_integrity_note": null,
+          "confidence": 0.9,
+          "evidence_id": "evidence_004",
+          "evidence_type": "figure",
+          "source_element_id": "S-sec-5-5.F1",
+          "source_anchors": [
+            {
+              "element_id": "S-sec-5-5.F1",
+              "selector": {
+                "type": "element"
+              }
+            }
+          ],
+          "verification_level": "image_observation",
+          "source_table_number": null,
+          "grounded_values": [],
+          "visual_observations": [
+            {
+              "asset_id": "A4",
+              "observation": "Legend/labels on the figure include per-method AuRC values summarized in the legend next to the radar plots, providing an at-a-glance summary of combined performance.",
+              "region_description": "Each subplot has a small legend listing methods and an AuRC value (e.g., 'HydraGAN 0.35', 'Original Data 0.38', etc.)",
+              "legibility": "readable",
+              "bbox": null,
+              "source_path": "assets/A4.jpg",
+              "source_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+              "sent_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+              "model": "gpt-5-mini-2025-08-07",
+              "source_verified": true,
+              "reading_verified": false
+            }
+          ]
+        }
+      ],
+      "supporting_statements": [],
+      "selected_reasoning_paths": [
+        {
+          "path_id": "reader_path_003",
+          "node_ids": [
+            "evidence_004",
+            "claim_003"
+          ],
+          "relation_ids": [
+            "relation_004"
+          ],
+          "path_role": "primary",
+          "explanation": "The figure reading notes that each radar subplot legend lists per-method AuRC values and that these values provide an at-a-glance summary alongside the radar plots. This supports the claim that using the radar chart quantified by AuRC yields a concise summary of the multiple data characteristics. The evidence is an image observation (legend + AuRC values) rather than a formal textual argument, so confidence is slightly lower but still supportive.",
+          "gap_description": null
+        }
+      ],
+      "evidence_search_note": null
+    }
+  ],
+  "generated_conclusion": {
+    "narrative": "In this section, the main claims center around the representation of performance metrics on a radar chart for the HydraGAN model. Claim **claim_001** asserts the goal of HydraGAN is to maximize the Area under the Radar Chart (AuRC) by augmenting the values along each spoke, although it lacks supporting evidence. Claim **claim_002** states that the radar chart spokes symbolize specific metrics: retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA). The strongest evidence for this claim comes from a table that lists these metrics (as seen in evidence sources S-sec-5-4.T1), and a visual depiction of the chart that clearly labels the spokes (evidence from S-sec-5-5.F1). Both pieces confirm the claim, with the image providing the most direct support.\n\nClaim **claim_003** discusses the use of the radar chart, tied with AuRC, to summarize multiple data characteristics efficiently. The evidence underpinning this claim includes reference to AuRC values in the chart's legends (evidence from S-sec-5-4.T1) and the radar plots themselves (image evidence from S-sec-5-5.F1), indicating that the radar chart does facilitate at-a-glance quantification of metrics.\n\nDespite the corroborative evidence for claims 002 and 003, the section does evoke some conflicts regarding interpretation—specifically, the varying levels of directness offered by tables versus images in illustrating the claims. However, unresolved gaps are minimal as both metrics and representations are sufficiently covered. Overall, the evidence provided supports the arguments surrounding the radar chart's value in comprehensively analyzing HydraGAN's performance, but direct textual support is more limited for certain claims, revealing a frail epistemic confidence in the narrative's claims about the chart's efficacy as a visualization tool.",
+    "key_claim_ids": [
+      "claim_001",
+      "claim_002",
+      "claim_003"
+    ]
+  },
+  "document_sections": [],
+  "document_report": null,
+  "schema_version": "analysis.v2",
+  "paper_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+  "status": "completed",
+  "warnings": [
+    "Figure pixels are used only when the source image is successfully attached; see image_report for actual attachments.",
+    "Promoted empirical/uncertain Claim to requires_support in S-sec-5-4.P1.",
+    "Returned windows and rejected source quotes are tracked separately. Neither proves exhaustive claim recall, image review, or accepted support.",
+    "3 source sentence(s) are not covered by initial Claim anchors; review the diagnostic examples, which may contain ordinary prose rather than Claims.",
+    "1 source-attributed method/setup claim(s): passage location was checked, but independent factual verification was not requested or performed."
+  ],
+  "errors": [
+    "Rejected source grounding for relation relation_002."
+  ],
+  "llm_call_count": 4,
+  "api_cost_report": {
+    "currency": "USD",
+    "estimate_only": true,
+    "price_checked_on": "2026-10-21",
+    "pricing_basis": "OpenAI standard online rates applied to API-reported tokens (including image input/reasoning output, not billing data)",
+    "accounting_note": "Image input is already included in reported input tokens. Reasoning is already included in output tokens. Neither is charged a second time. Hidden SDK retries/requests without usage receipts cannot be reconciled with the invoice.",
+    "input_images": 2,
+    "reasoning_tokens": 640,
+    "failed_attempts": 0,
+    "llm_calls_recorded": 4,
+    "input_tokens": 11838,
+    "cached_input_tokens": 0,
+    "output_tokens": 3701,
+    "complete": true,
+    "estimated_total_usd": 0.0090733,
+    "known_cost_usd": 0.0090733,
+    "unpriced_models": [],
+    "by_agent": [
+      {
+        "agent": "Claim",
+        "llm_calls": 1,
+        "input_tokens": 1388,
+        "cached_input_tokens": 0,
+        "output_tokens": 354,
+        "estimated_cost_usd": 0.0004206,
+        "known_cost_usd": 0.0004206
+      },
+      {
+        "agent": "Conclusion",
+        "llm_calls": 1,
+        "input_tokens": 868,
+        "cached_input_tokens": 0,
+        "output_tokens": 405,
+        "estimated_cost_usd": 0.0003732,
+        "known_cost_usd": 0.0003732
+      },
+      {
+        "agent": "Mapping",
+        "llm_calls": 1,
+        "input_tokens": 7794,
+        "cached_input_tokens": 0,
+        "output_tokens": 2348,
+        "estimated_cost_usd": 0.0066445,
+        "known_cost_usd": 0.0066445
+      },
+      {
+        "agent": "Reasoning",
+        "llm_calls": 1,
+        "input_tokens": 1788,
+        "cached_input_tokens": 0,
+        "output_tokens": 594,
+        "estimated_cost_usd": 0.001635,
+        "known_cost_usd": 0.001635
+      }
+    ],
+    "by_model": [
+      {
+        "model": "gpt-4o-mini-2024-07-18",
+        "llm_calls": 2,
+        "input_tokens": 2256,
+        "cached_input_tokens": 0,
+        "output_tokens": 759,
+        "estimated_cost_usd": 0.0007938,
+        "known_cost_usd": 0.0007938
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "llm_calls": 2,
+        "input_tokens": 9582,
+        "cached_input_tokens": 0,
+        "output_tokens": 2942,
+        "estimated_cost_usd": 0.0082795,
+        "known_cost_usd": 0.0082795
+      }
+    ],
+    "calls": [
+      {
+        "agent": "Claim",
+        "model": "gpt-4o-mini-2024-07-18",
+        "response_id": "resp_0a1542a23e93c9b6006adb7da7edf887d2807895feb33146a2",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 0,
+        "service_tier": "default",
+        "requested_model": "gpt-4o-mini",
+        "input_tokens": 1388,
+        "cached_input_tokens": 0,
+        "output_tokens": 354,
+        "estimated_cost_usd": 0.0004206,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Mapping",
+        "model": "gpt-5-mini-2025-08-07",
+        "response_id": "resp_071dde2a487e2b0a006adb7daca75087d28cf991212c16a6ff",
+        "call_status": "returned",
+        "input_images": 2,
+        "reasoning_tokens": 448,
+        "service_tier": "default",
+        "requested_model": "gpt-5-mini",
+        "input_tokens": 7794,
+        "cached_input_tokens": 0,
+        "output_tokens": 2348,
+        "estimated_cost_usd": 0.0066445,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Reasoning",
+        "model": "gpt-5-mini-2025-08-07",
+        "response_id": "resp_00a536b5333a0ad7006adb7dc0e4b487d2b9188a4521dc3795",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 192,
+        "service_tier": "default",
+        "requested_model": "gpt-5-mini",
+        "input_tokens": 1788,
+        "cached_input_tokens": 0,
+        "output_tokens": 594,
+        "estimated_cost_usd": 0.001635,
+        "pricing_status": "priced"
+      },
+      {
+        "agent": "Conclusion",
+        "model": "gpt-4o-mini-2024-07-18",
+        "response_id": "resp_08b67585c5352d47006adb7dc781c087d28ebb11f8a9dab326",
+        "call_status": "returned",
+        "input_images": 0,
+        "reasoning_tokens": 0,
+        "service_tier": "default",
+        "requested_model": "gpt-4o-mini",
+        "input_tokens": 868,
+        "cached_input_tokens": 0,
+        "output_tokens": 405,
+        "estimated_cost_usd": 0.0003732,
+        "pricing_status": "priced"
+      }
+    ],
+    "budget_managed": false
+  },
+  "budget_report": null,
+  "image_report": {
+    "mode": "images_in_existing_mapping_call",
+    "attachments_sent": 2,
+    "unique_images_sent": 2,
+    "events": [
+      {
+        "element_id": "S-sec-3.F1",
+        "asset_id": "A1",
+        "source_path": "assets/A1.jpg",
+        "source_sha256": "886cf2cbfb76d2ee87136d6fde915434f4974afb648263c8f0bfc74038d934ee",
+        "sent_sha256": "886cf2cbfb76d2ee87136d6fde915434f4974afb648263c8f0bfc74038d934ee",
+        "width": 500,
+        "height": 471,
+        "cell_id": null,
+        "conversion": null,
+        "model": "gpt-5-mini-2025-08-07",
+        "request_id": "resp_071dde2a487e2b0a006adb7daca75087d28cf991212c16a6ff",
+        "status": "submitted_with_response"
+      },
+      {
+        "element_id": "S-sec-5-5.F1",
+        "asset_id": "A4",
+        "source_path": "assets/A4.jpg",
+        "source_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+        "sent_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+        "width": 420,
+        "height": 500,
+        "cell_id": null,
+        "conversion": null,
+        "model": "gpt-5-mini-2025-08-07",
+        "request_id": "resp_071dde2a487e2b0a006adb7daca75087d28cf991212c16a6ff",
+        "status": "submitted_with_response"
+      }
+    ],
+    "note": "An attachment receipt proves which image was sent, not that every digit or plot interpretation is correct."
+  },
+  "analysis_plan": {
+    "schema_version": "scope_plan.v1",
+    "mode": "section",
+    "paper_id": "acm_10_1145_3653982",
+    "paper_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+    "requested_section_ids": [
+      "S-sec-5-4"
+    ],
+    "section_ids": [
+      "S-sec-5-4"
+    ],
+    "sections": [
+      {
+        "section_id": "S-sec-5-4",
+        "title": "5.4 Performance Visualization",
+        "paragraph_count": 2
+      }
+    ],
+    "target_element_ids": [
+      "S-sec-5-4.P1",
+      "S-sec-5-4.P2"
+    ],
+    "evidence_element_ids": [
+      "S-sec-5-4.T1"
+    ],
+    "paragraph_count": 2,
+    "window_count": 2,
+    "text_characters": 1044,
+    "claim_batch_count": 1,
+    "batches": [
+      {
+        "batch_id": "claim_batch_001",
+        "windows": [
+          {
+            "window_id": "S-sec-5-4.P1:0:702",
+            "element_id": "S-sec-5-4.P1",
+            "section_id": "S-sec-5-4",
+            "start": 0,
+            "end": 702
+          },
+          {
+            "window_id": "S-sec-5-4.P2:0:342",
+            "element_id": "S-sec-5-4.P2",
+            "section_id": "S-sec-5-4",
+            "start": 0,
+            "end": 342
+          }
+        ]
+      }
+    ],
+    "evidence_search_scope": "whole_document",
+    "batch_chars": 9000,
+    "batch_paragraphs": 5,
+    "notes": [
+      "All selected nonempty paragraphs are scheduled for text claim extraction; no PDF/HTML reparsing.",
+      "Tables, figures, equations and references are evidence candidates, not independently exhaustive targets.",
+      "Long paragraphs use overlapping windows; a very long cross-window claim may still be missed.",
+      "A completed extraction window is not proof of complete claim recall or semantic correctness."
+    ]
+  },
+  "scope_report": {
+    "mode": "section",
+    "selected_section_ids": [
+      "S-sec-5-4"
+    ],
+    "scheduled_paragraphs": 2,
+    "paragraphs_with_all_windows_returned": 2,
+    "scheduled_windows": 2,
+    "window_status_counts": {
+      "parsed": 2
+    },
+    "all_extraction_windows_returned": true,
+    "all_extraction_windows_responded": true,
+    "all_extraction_windows_clean": true,
+    "unreturned_window_ids": [],
+    "rejected_candidate_count": 0,
+    "windows_with_rejected_candidates": [],
+    "unprocessed_or_incomplete_element_ids": [],
+    "windows": [
+      {
+        "window_id": "S-sec-5-4.P1:0:702",
+        "element_id": "S-sec-5-4.P1",
+        "section_id": "S-sec-5-4",
+        "start": 0,
+        "end": 702,
+        "batch_id": "claim_batch_001",
+        "status": "parsed",
+        "accepted_claims": 2,
+        "rejected_candidates": 0
+      },
+      {
+        "window_id": "S-sec-5-4.P2:0:342",
+        "element_id": "S-sec-5-4.P2",
+        "section_id": "S-sec-5-4",
+        "start": 0,
+        "end": 342,
+        "batch_id": "claim_batch_001",
+        "status": "parsed",
+        "accepted_claims": 1,
+        "rejected_candidates": 0
+      }
+    ],
+    "evidence_search_scope": "whole_document",
+    "note": "Returned windows and rejected source quotes are tracked separately. Neither proves exhaustive claim recall, image review, or accepted support."
+  },
+  "coverage_report": {
+    "scope": "extracted_claims_only",
+    "claims_extracted": 3,
+    "claims_with_linked_evidence": 2,
+    "claims_without_linked_evidence": [
+      "claim_001"
+    ],
+    "claims_with_reasoning_paths": 2,
+    "source_integrity_issues": 1,
+    "note": "Counts found links only; no supported/partial/unsupported classifications are made."
+  },
+  "claim_recall_report": {
+    "scope": "selected_paragraphs_only",
+    "initial_claims_in_scope": 3,
+    "mapped_intermediate_claims_in_scope": 0,
+    "potential_omissions": [],
+    "potential_omission_count": 0,
+    "uncovered_sentence_count": 3,
+    "uncovered_sentence_examples": [
+      {
+        "source_element_id": "S-sec-5-4.P1",
+        "start": 0,
+        "end": 125,
+        "source_quote": "In addition to summarizing the quantitative results of HydraGAN and baseline methods, we provide a performance visualization.",
+        "initially_covered_fraction": 0.0,
+        "interpretation": "potentially_unexamined_sentence_not_a_verified_claim"
+      },
+      {
+        "source_element_id": "S-sec-5-4.P1",
+        "start": 126,
+        "end": 194,
+        "source_quote": "For this, we introduce a radar chart to evaluate the set of metrics.",
+        "initially_covered_fraction": 0.0,
+        "interpretation": "potentially_unexamined_sentence_not_a_verified_claim"
+      },
+      {
+        "source_element_id": "S-sec-5-4.P2",
+        "start": 0,
+        "end": 127,
+        "source_quote": "We postulate that this method of visualization presents a novel, approachable way of evaluating multi-objective synthetic data.",
+        "initially_covered_fraction": 0.0,
+        "interpretation": "potentially_unexamined_sentence_not_a_verified_claim"
+      }
+    ],
+    "excluded_unverified_intermediates": 0,
+    "excluded_unverified_initial_spans": 0,
+    "source_rechecked_against_paper": true,
+    "coverage_threshold": 0.8,
+    "note": "These exact-source statements were discovered later by Mapping but not sufficiently covered by initial Claim spans. They require review; some may be contextual, redundant, or otherwise not standalone claims. This is a lower-bound diagnostic, NOT a guarantee that other claims were not missed. Uncovered source sentences are approximate review leads, not proven omitted scientific claims. No extra model calls, target promotion, or evidence edges were created."
+  },
+  "claim_extraction_diagnostics": {
+    "rejected_candidate_count": 0,
+    "reason_counts": {},
+    "candidates": [],
+    "note": "Candidates are retained for diagnosis only. They were not promoted to Claims because no unique exact-source span was established; rejection may reflect model paraphrase, formatting mismatch, ambiguity or a genuinely invalid candidate."
+  },
+  "run_report": {
+    "run_status": "finished",
+    "reason": "All scheduled analysis steps finished.",
+    "claim_windows_planned": 2,
+    "claim_windows_responded": 2,
+    "unreturned_window_ids": [],
+    "initial_targets_total": 3,
+    "initial_targets_analyzed": 3,
+    "unattempted_initial_target_ids": [],
+    "mapping_rounds_used": 1,
+    "mapping_rounds_limit": 4,
+    "source_integrity_issues": 1,
+    "current_step": "reader_conclusion_complete",
+    "note": "Operational completion only; an empty Evidence list does not mean a Claim is false."
+  },
+  "section_conclusion": {
+    "format": "reader_section_links.v1",
+    "title": "5.4 Performance Visualization",
+    "run_status": "finished",
+    "narrative": "In this section, the main claims center around the representation of performance metrics on a radar chart for the HydraGAN model. Claim **claim_001** asserts the goal of HydraGAN is to maximize the Area under the Radar Chart (AuRC) by augmenting the values along each spoke, although it lacks supporting evidence. Claim **claim_002** states that the radar chart spokes symbolize specific metrics: retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA). The strongest evidence for this claim comes from a table that lists these metrics (as seen in evidence sources S-sec-5-4.T1), and a visual depiction of the chart that clearly labels the spokes (evidence from S-sec-5-5.F1). Both pieces confirm the claim, with the image providing the most direct support.\n\nClaim **claim_003** discusses the use of the radar chart, tied with AuRC, to summarize multiple data characteristics efficiently. The evidence underpinning this claim includes reference to AuRC values in the chart's legends (evidence from S-sec-5-4.T1) and the radar plots themselves (image evidence from S-sec-5-5.F1), indicating that the radar chart does facilitate at-a-glance quantification of metrics.\n\nDespite the corroborative evidence for claims 002 and 003, the section does evoke some conflicts regarding interpretation—specifically, the varying levels of directness offered by tables versus images in illustrating the claims. However, unresolved gaps are minimal as both metrics and representations are sufficiently covered. Overall, the evidence provided supports the arguments surrounding the radar chart's value in comprehensively analyzing HydraGAN's performance, but direct textual support is more limited for certain claims, revealing a frail epistemic confidence in the narrative's claims about the chart's efficacy as a visualization tool.",
+    "total_initial_claims": 3,
+    "claims_with_links": 2,
+    "findings": [
+      {
+        "claim_id": "claim_001",
+        "source_element_id": "S-sec-5-4.P1",
+        "source_anchor": {
+          "element_id": "S-sec-5-4.P1",
+          "selector": {
+            "type": "text_span",
+            "start": 195,
+            "end": 399,
+            "exact": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+            "prefix": "to evaluate the set of metrics. ",
+            "suffix": " Corresponding to the metrics we"
+          }
+        },
+        "original_statement": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+        "claim_type": "statement",
+        "evidence_ids": [],
+        "relation_ids": [],
+        "path_ids": []
+      },
+      {
+        "claim_id": "claim_002",
+        "source_element_id": "S-sec-5-4.P1",
+        "source_anchor": {
+          "element_id": "S-sec-5-4.P1",
+          "selector": {
+            "type": "text_span",
+            "start": 400,
+            "end": 603,
+            "exact": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+            "prefix": "a under the Radar Chart (AuRC). ",
+            "suffix": " Each metric is normalized to th"
+          }
+        },
+        "original_statement": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+        "claim_type": "claim",
+        "evidence_ids": [
+          "evidence_001",
+          "evidence_003"
+        ],
+        "relation_ids": [
+          "relation_001",
+          "relation_003"
+        ],
+        "path_ids": [
+          "reader_path_001",
+          "reader_path_002"
+        ]
+      },
+      {
+        "claim_id": "claim_003",
+        "source_element_id": "S-sec-5-4.P2",
+        "source_anchor": {
+          "element_id": "S-sec-5-4.P2",
+          "selector": {
+            "type": "text_span",
+            "start": 128,
+            "end": 342,
+            "exact": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+            "prefix": "multi-objective synthetic data. ",
+            "suffix": ""
+          }
+        },
+        "original_statement": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+        "claim_type": "claim",
+        "evidence_ids": [
+          "evidence_002",
+          "evidence_004"
+        ],
+        "relation_ids": [
+          "relation_002",
+          "relation_004"
+        ],
+        "path_ids": [
+          "reader_path_003"
+        ]
+      }
+    ],
+    "extraction_coverage": {
+      "windows_planned": 2,
+      "windows_responded": 2,
+      "all_extraction_windows_clean": true,
+      "exhaustive_claim_recall": "not_proven"
+    },
+    "generated_conclusion": {
+      "narrative": "In this section, the main claims center around the representation of performance metrics on a radar chart for the HydraGAN model. Claim **claim_001** asserts the goal of HydraGAN is to maximize the Area under the Radar Chart (AuRC) by augmenting the values along each spoke, although it lacks supporting evidence. Claim **claim_002** states that the radar chart spokes symbolize specific metrics: retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA). The strongest evidence for this claim comes from a table that lists these metrics (as seen in evidence sources S-sec-5-4.T1), and a visual depiction of the chart that clearly labels the spokes (evidence from S-sec-5-5.F1). Both pieces confirm the claim, with the image providing the most direct support.\n\nClaim **claim_003** discusses the use of the radar chart, tied with AuRC, to summarize multiple data characteristics efficiently. The evidence underpinning this claim includes reference to AuRC values in the chart's legends (evidence from S-sec-5-4.T1) and the radar plots themselves (image evidence from S-sec-5-5.F1), indicating that the radar chart does facilitate at-a-glance quantification of metrics.\n\nDespite the corroborative evidence for claims 002 and 003, the section does evoke some conflicts regarding interpretation—specifically, the varying levels of directness offered by tables versus images in illustrating the claims. However, unresolved gaps are minimal as both metrics and representations are sufficiently covered. Overall, the evidence provided supports the arguments surrounding the radar chart's value in comprehensively analyzing HydraGAN's performance, but direct textual support is more limited for certain claims, revealing a frail epistemic confidence in the narrative's claims about the chart's efficacy as a visualization tool.",
+      "key_claim_ids": [
+        "claim_001",
+        "claim_002",
+        "claim_003"
+      ]
+    },
+    "note": "Relations are Mapping interpretations; provenance checks do not certify scientific truth."
+  },
+  "input_tokens_used": 11838,
+  "output_tokens_used": 3701,
+  "mapping_round": 1,
+  "gap_repair_round": 0,
+  "current_step": "reader_conclusion_complete",
+  "paper_id": "acm_10_1145_3653982",
+  "query": null,
+  "target": null,
+  "claims": [
+    {
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P1",
+        "selector": {
+          "type": "text_span",
+          "start": 195,
+          "end": 399,
+          "exact": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+          "prefix": "to evaluate the set of metrics. ",
+          "suffix": " Corresponding to the metrics we"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "claim_id": "claim_001",
+      "text": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+      "source_quote": "Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).",
+      "claim_type": "statement",
+      "evidence_policy": "source_report",
+      "source_verified": true,
+      "source_element_id": "S-sec-5-4.P1",
+      "source_location": {
+        "section_id": "S-sec-5-4",
+        "paragraph_id": "S-sec-5-4.P1",
+        "sentence_index": null,
+        "char_start": 195,
+        "char_end": 399
+      },
+      "section_id": "S-sec-5-4",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P1",
+        "selector": {
+          "type": "text_span",
+          "start": 400,
+          "end": 603,
+          "exact": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+          "prefix": "a under the Radar Chart (AuRC). ",
+          "suffix": " Each metric is normalized to th"
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "claim_id": "claim_002",
+      "text": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+      "source_quote": "Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "S-sec-5-4.P1",
+      "source_location": {
+        "section_id": "S-sec-5-4",
+        "paragraph_id": "S-sec-5-4.P1",
+        "sentence_index": null,
+        "char_start": 400,
+        "char_end": 603
+      },
+      "section_id": "S-sec-5-4",
+      "confidence": null
+    },
+    {
+      "source_anchor": {
+        "element_id": "S-sec-5-4.P2",
+        "selector": {
+          "type": "text_span",
+          "start": 128,
+          "end": 342,
+          "exact": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+          "prefix": "multi-objective synthetic data. ",
+          "suffix": ""
+        }
+      },
+      "source_field": "text",
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "claim_id": "claim_003",
+      "text": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+      "source_quote": "The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.",
+      "claim_type": "claim",
+      "evidence_policy": "requires_support",
+      "source_verified": true,
+      "source_element_id": "S-sec-5-4.P2",
+      "source_location": {
+        "section_id": "S-sec-5-4",
+        "paragraph_id": "S-sec-5-4.P2",
+        "sentence_index": null,
+        "char_start": 128,
+        "char_end": 342
+      },
+      "section_id": "S-sec-5-4",
+      "confidence": null
+    }
+  ],
+  "evidence": [
+    {
+      "visual_groundings": [],
+      "source_anchors": [
+        {
+          "element_id": "S-sec-5-4.T1",
+          "selector": {
+            "type": "table_cells",
+            "cell_ids": [
+              "S-sec-5-4.T1.R0C2",
+              "S-sec-5-4.T1.R0C3",
+              "S-sec-5-4.T1.R0C4",
+              "S-sec-5-4.T1.R0C5",
+              "S-sec-5-4.T1.R0C6"
+            ]
+          }
+        }
+      ],
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "verification_level": "table_cells",
+      "source_table_number": null,
+      "table_cell_contexts": {
+        "S-sec-5-4.T1.R0C2": {
+          "row": 0,
+          "col": 2,
+          "role": "column_header",
+          "row_label": "Dataset",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "S-sec-5-4.T1.R0C3": {
+          "row": 0,
+          "col": 3,
+          "role": "column_header",
+          "row_label": "Dataset",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "S-sec-5-4.T1.R0C4": {
+          "row": 0,
+          "col": 4,
+          "role": "column_header",
+          "row_label": "Dataset",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "S-sec-5-4.T1.R0C5": {
+          "row": 0,
+          "col": 5,
+          "role": "column_header",
+          "row_label": "Dataset",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        },
+        "S-sec-5-4.T1.R0C6": {
+          "row": 0,
+          "col": 6,
+          "role": "column_header",
+          "row_label": "Dataset",
+          "row_axis_label": null,
+          "column_headers": [],
+          "column_group": null
+        }
+      },
+      "evidence_id": "evidence_001",
+      "evidence_type": "table",
+      "source_element_id": "S-sec-5-4.T1",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: table_cells\npath=[\"grid\", \"cells\", 2, \"text\"] value=\"EM\"\npath=[\"grid\", \"cells\", 3, \"text\"] value=\"RA\"\npath=[\"grid\", \"cells\", 4, \"text\"] value=\"RE\"\npath=[\"grid\", \"cells\", 5, \"text\"] value=\"TA\"\npath=[\"grid\", \"cells\", 6, \"text\"] value=\"DI\"",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": "S-sec-5-4.T1.R0C2",
+          "path": [
+            "grid",
+            "cells",
+            2,
+            "text"
+          ],
+          "expected": "EM",
+          "mode": "equals",
+          "description": "Header cell naming EM (EM distance) as a metric/column."
+        },
+        {
+          "cell_id": "S-sec-5-4.T1.R0C3",
+          "path": [
+            "grid",
+            "cells",
+            3,
+            "text"
+          ],
+          "expected": "RA",
+          "mode": "equals",
+          "description": "Header cell naming RA (retained accuracy) as a metric/column."
+        },
+        {
+          "cell_id": "S-sec-5-4.T1.R0C4",
+          "path": [
+            "grid",
+            "cells",
+            4,
+            "text"
+          ],
+          "expected": "RE",
+          "mode": "equals",
+          "description": "Header cell naming RE (re-identification error) as a metric/column."
+        },
+        {
+          "cell_id": "S-sec-5-4.T1.R0C5",
+          "path": [
+            "grid",
+            "cells",
+            5,
+            "text"
+          ],
+          "expected": "TA",
+          "mode": "equals",
+          "description": "Header cell naming TA (target accuracy) as a metric/column."
+        },
+        {
+          "cell_id": "S-sec-5-4.T1.R0C6",
+          "path": [
+            "grid",
+            "cells",
+            6,
+            "text"
+          ],
+          "expected": "DI",
+          "mode": "equals",
+          "description": "Header cell naming DI (diversity) as a metric/column."
+        }
+      ],
+      "section_id": "S-sec-5-4",
+      "confidence": 0.9
+    },
+    {
+      "visual_groundings": [],
+      "source_anchors": [],
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "verification_level": null,
+      "source_table_number": null,
+      "table_cell_contexts": {},
+      "evidence_id": "evidence_002",
+      "evidence_type": "table",
+      "source_element_id": "S-sec-5-4.T1",
+      "role": "support",
+      "content": "path=[\"caption\"] value=\"Comparative Performance of the Generative Models Using the Metrics of Retained Accuracy (RA), Earth Mover’s Distance (EM), Diversity (DI), Target Accuracy (TA), Re-identification Error (RE), Mean Distance (MD), and Mean Squared Error (MSE)\\nThe best-performing method is indicated by bold font for each case.\"\nCELL_ID=\"S-sec-5-4.T1.R0C0\" row=0 col=0 role=column_header path=[\"grid\", \"cells\", 0, \"text\"] value=\"Dataset\"\nCELL_ID=\"S-sec-5-4.T1.R0C1\" row=0 col=1 role=column_header path=[\"grid\", \"cells\", 1, \"text\"] value=\"Method\"\nCELL_ID=\"S-sec-5-4.T1.R0C2\" row=0 col=2 role=column_header path=[\"grid\", \"cells\", 2, \"text\"] value=\"EM\"\nCELL_ID=\"S-sec-5-4.T1.R0C3\" row=0 col=3 role=column_header path=[\"grid\", \"cells\", 3, \"text\"] value=\"RA\"\nCELL_ID=\"S-sec-5-4.T1.R0C4\" row=0 col=4 role=column_header path=[\"grid\", \"cells\", 4, \"text\"] value=\"RE\"\nCELL_ID=\"S-sec-5-4.T1.R0C5\" row=0 col=5 role=column_header path=[\"grid\", \"cells\", 5, \"text\"] value=\"TA\"\nCELL_ID=\"S-sec-5-4.T1.R0C6\" row=0 col=6 role=column_header path=[\"grid\", \"cells\", 6, \"text\"] value=\"DI\"\nCELL_ID=\"S-sec-5-4.T1.R0C7\" row=0 col=7 role=column_header path=[\"grid\", \"cells\", 7, \"text\"] value=\"MD\"\nCELL_ID=\"S-sec-5-4.T1.R0C8\" row=0 col=8 role=column_header path=[\"grid\", \"cells\", 8, \"text\"] value=\"MSE\"\nCELL_ID=\"S-sec-5-4.T1.R0C9\" row=0 col=9 role=column_header path=[\"grid\", \"cells\", 9, \"text\"] value=\"AuRC\"\nCELL_ID=\"S-sec-5-4.T1.R1C0\" row=1 col=0 role=data path=[\"grid\", \"cells\", 10, \"text\"] value=\"UCI\"\nCELL_ID=\"S-sec-5-4.T1.R1C1\" row=1 col=1 role=data path=[\"grid\", \"cells\", 11, \"text\"] value=\"Original\"\nCELL_ID=\"S-sec-5-4.T1.R1C2\" row=1 col=2 role=data path=[\"grid\", \"cells\", 12, \"text\"] value=\"1.00\"\nCELL_ID=\"S-sec-5-4.T1.R1C3\" row=1 col=3 role=data path=[\"grid\", \"cells\", 13, \"text\"] value=\"0.96\"\nCELL_ID=\"S-sec-5-4.T1.R1C4\" row=1 col=4 role=data path=[\"grid\", \"cells\", 14, \"text\"] value=\"0.03\"\nCELL_ID=\"S-sec-5-4.T1.R1C5\" row=1 col=5 role=data path=[\"grid\", \"cells\", 15, \"text\"] value=\"0.97\"\nCELL_ID=\"S-sec-5-4.T1.R1C6\" row=1 col=6 role=data path=[\"grid\", \"cells\", 16, \"text\"] value=\"0.71\"\nCELL_ID=\"S-sec-5-4.T1.R1C7\" row=1 col=7 role=data path=[\"grid\", \"cells\", 17, \"text\"] value=\"0.26\"\nCELL_ID=\"S-sec-5-4.T1.R1C8\" row=1 col=8 role=data path=[\"grid\", \"cells\", 18, \"text\"] value=\"0.20\"\nCELL_ID=\"S-sec-5-4.T1.R1C9\" row=1 col=9 role=data path=[\"grid\", \"cells\", 19, \"text\"] value=\"0.31\"\nCELL_ID=\"S-sec-5-4.T1.R2C0\" row=2 col=0 role=data path=[\"grid\", \"cells\", 20, \"text\"] value=\"Heart\"\nCELL_ID=\"S-sec-5-4.T1.R2C1\" row=2 col=1 role=data path=[\"grid\", \"cells\", 21, \"text\"] value=\"PPGAN\"\nCELL_ID=\"S-sec-5-4.T1.R2C2\" row=2 col=2 role=data path=[\"grid\", \"cells\", 22, \"text\"] value=\"0.75\"\nCELL_ID=\"S-sec-5-4.T1.R2C3\" row=2 col=3 role=data path=[\"grid\", \"cells\", 23, \"text\"] value=\"0.67\"\nCELL_ID=\"S-sec-5-4.T1.R2C4\" row=2 col=4 role=data path=[\"grid\", \"cells\", 24, \"text\"] value=\"0.16\"\nCELL_ID=\"S-sec-5-4.T1.R2C5\" row=2 col=5 role=data path=[\"grid\", \"cells\", 25, \"text\"] value=\"0.75\"\nCELL_ID=\"S-sec-5-4.T1.R2C6\" row=2 col=6 role=data path=[\"grid\", \"cells\", 26, \"text\"] value=\"0.91\"\nCELL_ID=\"S-sec-5-4.T1.R2C7\" row=2 col=7 role=data path=[\"grid\", \"cells\", 27, \"text\"] value=\"0.35\"\nCELL_ID=\"S-sec-5-4.T1.R2C8\" row=2 col=8 role=data path=[\"grid\", \"cells\", 28, \"text\"] value=\"0.19\"\nCELL_ID=\"S-sec-5-4.T1.R2C9\" row=2 col=9 role=data path=[\"grid\", \"cells\", 29, \"text\"] value=\"0.27\"\nCELL_ID=\"S-sec-5-4.T1.R3C0\" row=3 col=0 role=data path=[\"grid\", \"cells\", 30, \"text\"] value=\"\"\nCELL_ID=\"S-sec-5-4.T1.R3C1\" row=3 col=1 role=data path=[\"grid\", \"cells\", 31, \"text\"] value=\"PATE-GAN\"\nCELL_ID=\"S-sec-5-4.T1.R3C2\" row=3 col=2 role=data path=[\"grid\", \"cells\", 32, \"text\"] value=\"0.77\"\nCELL_ID=\"S-sec-5-4.T1.R3C3\" row=3 col=3 role=data path=[\"grid\", \"cells\", 33, \"text\"] value=\"0.65\"\nCELL_ID=\"S-sec-5-4.T1.R3C4\" row=3 col=4 role=data path=[\"grid\", \"cells\", 34, \"text\"] value=\"0.31\"\nCELL_ID=\"S-sec-5-4.T1.R3C5\" row=3 col=5 role=data path=[\"grid\", \"cells\", 35, \"text\"] value=\"0.60\"\nCELL_ID=\"S-sec-5-4.T1.R3C6\" row=3 col=6 role=data path=[\"grid\", \"cells\", 36, \"text\"] value=\"0.99\"\nCELL_ID=\"S-sec-5-4.T1.R3C7\" row=3 col=7 role=data path=[\"grid\", \"cells\", 37, \"text\"] value=\"0.33\"\nCELL_ID=\"S-sec-5-4.T1.R3C8\" row=3 col=8 role=data path=[\"grid\", \"cells\", 38, \"text\"] value=\"0.16\"\nCELL_ID=\"S-sec-5-4.T1.R3C9\" row=3 col=9 role=data path=[\"grid\", \"cells\", 39, \"text\"] value=\"0.29\"\nCELL_ID=\"S-sec-5-4.T1.R4C0\" row=4 col=0 role=data path=[\"grid\", \"cells\", 40, \"text\"] value=\"\"\nCELL_ID=\"S-sec-5-4.T1.R4C1\" row=4 col=1 role=data path=[\"grid\", \"cells\", 41, \"text\"] value=\"CTGAN\"\nCELL_ID=\"S-sec-5-4.T1.R4C2\" row=4 col=2 role=data path=[\"grid\", \"cells\", 42, \"text\"] value=\"0.77\"\nCELL_ID=\"S-sec-5-4.T1.R4C3\" row=4 col=3 role=data path=[\"grid\", \"cells\", 43, \"text\"] value=\"0.64\"\nCELL_ID=\"S-sec-5-4.T1.R4C4\" row=4 col=4 role=data path=[\"grid\", \"cells\", 44, \"text\"] value=\"0.31\"\nCELL_ID=\"S-sec-5-4.T1.R4C5\" row=4 col=5 role=data path=[\"grid\", \"cells\", 45, \"text\"] value=\"0.40\"\nCELL_ID=\"S-sec-5-4.T1.R4C6\" row=4 col=6 role=data path=[\"grid\", \"cells\", 46, \"text\"] value=\"0.81\"\nCELL_ID=\"S-sec-5-4.T1.R4C7\" row=4 col=7 role=data path=[\"grid\", \"cells\", 47, \"text\"] value=\"0.41\"\nCELL_ID=\"S-sec-5-4.T1.R4C8\" row=4 col=8 role=data path=[\"grid\", \"cells\", 48, \"text\"] value=\"0.21\"\nCELL_ID=\"S-sec-5-4.T1.R4C9\" row=4 col=9 role=data path=[\"grid\", \"cells\", 49, \"text\"] value=\"0.23\"\nCELL_ID=\"S-sec-5-4.T1.R5C0\" row=5 col=0 role=data path=[\"grid\", \"cells\", 50, \"text\"] value=\"\"\nCELL_ID=\"S-sec-5-4.T1.R5C1\" row=5 col=1 role=data path=[\"grid\", \"cells\", 51, \"text\"] value=\"CTAB-GAN+\"\nCELL_ID=\"S-sec-5-4.T1.R5C2\" row=5 col=2 role=data path=[\"grid\", \"cells\", 52, \"text\"] value=\"0.78\"\nCELL_ID=\"S-sec-5-4.T1.R5C3\" row=5 col=3 role=data path=[\"grid\", \"cells\", 53, \"text\"] value=\"0.63\"\nCELL_ID=\"S-sec-5-4.T1.R5C4\" row=5 col=4 role=data path=[\"grid\", \"cells\", 54, \"text\"] value=\"0.38\"\nCELL_ID=\"S-sec-5-4.T1.R5C5\" row=5 col=5 role=data path=[\"grid\", \"cells\", 55, \"text\"] value=\"0.47\"\nCELL_ID=\"S-sec-5-4.T1.R5C6\" row=5 col=6 role=data path=[\"grid\", \"cells\", 56, \"text\"] value=\"0.96\"\nCELL_ID=\"S-sec-5-4.T1.R5C7\" row=5 col=7 role=data path=[\"grid\", \"cells\", 57, \"text\"] value=\"0.36\"\nCELL_ID=\"S-sec-5-4.T1.R5C8\" row=5 col=8 role=data path=[\"grid\", \"cells\", 58, \"text\"] value=\"0.17\"\nCELL_ID=\"S-sec-5-4.T1.R5C9\" row=5 col=9 role=data path=[\"grid\", \"cells\", 59, \"text\"] value=\"0.27\"\nCELL_ID=\"S-sec-5-4.T1.R6C0\" row=6 col=0 role=data path=[\"grid\", \"cells\", 60, \"text\"] value=\"\"\nCELL_ID=\"S-sec-5-4.T1.R6C1\" row=6 col=1 role=data path=[\"grid\", \"cells\", 61, \"text\"] value=\"HydraGAN\"\nCELL_ID=\"S-sec-5-4.T1.R6C2\" row=6 col=2 role=data path=[\"grid\", \"cells\", 62, \"text\"] value=\"0.77\"\nCELL_ID=\"S-sec-5-4.T1.R6C3\" row=6 col=3 role=data path=[\"grid\", \"cells\", 63, \"text\"] value=\"0.63\"\nCELL_ID=\"S-sec-5-4.T1.R6C4\" row=6 col=4 role=data path=[\"grid\", \"cells\", 64, \"text\"] value=\"0.40\"\nCELL_ID=\"S-sec-5-4.T1.R6C5\" row=6 col=5 role=data path=[\"grid\", \"cells\", 65, \"text\"] value=\"0.60\"\nCELL_ID=\"S-sec-5-4.T1.R6C6\" row=6 col=6 role=data path=[\"grid\", \"cells\", 66, \"text\"] value=\"0.99\"\nCELL_ID=\"S-sec-5-4.T1.R6C7\" row=6 col=7 role=data path=[\"grid\", \"cells\", 67, \"text\"] value=\"0.32\"\nCELL_ID=\"S-sec-5-4.T1.R6C8\" row=6 col=8 role=data path=[\"grid\", \"cells\", 68, \"text\"] value=\"0.14\"\nCELL_ID=\"S-sec-5-4.T1.R6C9\" row=6 col=9 role=data path=[\"grid\", \"cells\", 69, \"text\"] value=\"0.30\"\nCELL_ID=\"S-sec-5-4.T1.R7C0\" row=7 col=0 role=data path=[\"grid\", \"cells\", 70, \"text\"] value=\"Smart\"\nCELL_ID=\"S-sec-5-4.T1.R7C1\" row=7 col=1 role=data path=[\"grid\", \"cells\", 71, \"text\"] value=\"Original\"\nCELL_ID=\"S-sec-5-4.T1.R7C2\" row=7 col=2 role=data path=[\"grid\", \"cells\", 72, \"text\"] value=\"1.00\"\nCELL_ID=\"S-sec-5-4.T1.R7C3\" row=7 col=3 role=data path=[\"grid\", \"cells\", 73, \"text\"] value=\"0.89\"\nCELL_ID=\"S-sec-5-4.T1.R7C4\" row=7 col=4 role=data path=[\"grid\", \"cells\", 74, \"text\"] value=\"0.10\"\nCELL_ID=\"S-sec-5-4.T1.R7C5\" row=7 col=5 role=data path=[\"grid\", \"cells\", 75, \"text\"] value=\"0.97\"\nCELL_ID=\"S-sec-5-4.T1.R7C6\" row=7 col=6 role=data path=[\"grid\", \"cells\", 76, \"text\"] value=\"0.93\"\nCELL_ID=\"S-sec-5-4.T1.R7C7\" row=7 col=7 role=data path=[\"grid\", \"cells\", 77, \"text\"] value=\"0.22\"\nCELL_ID=\"S-sec-5-4.T1.R7C8\" row=7 col=8 role=data path=[\"grid\", \"cells\", 78, \"text\"] value=\"0.17\"\nCELL_ID=\"S-sec-5-4.T1.R7C9\" row=7 col=9 role=data path=[\"grid\", \"cells\", 79, \"text\"] value=\"0.37\"\nCELL_ID=\"S-sec-5-4.T1.R8C0\" row=8 col=0 role=data path=[\"grid\", \"cells\", 80, \"text\"] value=\"Home\"\nCELL_ID=\"S-sec-5-4.T1.R8C1\" row=8 col=1 role=data path=[\"grid\", \"cells\", 81, \"text\"] value=\"PPGAN\"\nCELL_ID=\"S-sec-5-4.T1.R8C2\" row=8 col=2 role=data path=[\"grid\", \"cells\", 82, \"text\"] value=\"0.85\"\nCELL_ID=\"S-sec-5-4.T1.R8C3\" row=8 col=3 role=data path=[\"grid\", \"cells\", 83, \"text\"] value=\"0.76\"\nCELL_ID=\"S-sec-5-4.T1.R8C4\" row=8 col=4 role=data path=[\"grid\", \"cells\", 84, \"text\"] value=\"0.19\"\nCELL_ID=\"S-sec-5-4.T1.R8C5\" row=8 col=5 role=data path=[\"grid\", \"cells\", 85, \"text\"] value=\"0.93\"\nCELL_ID=\"S-sec-5-4.T1.R8C6\" row=8 col=6 role=data path=[\"grid\", \"cells\", 86, \"text\"] value=\"0.90\"\nCELL_ID=\"S-sec-5-4.T1.R8C7\" row=8 col=7 role=data path=[\"grid\", \"cells\", 87, \"text\"] value=\"0.28\"\nCELL_ID=\"S-sec-5-4.T1.R8C8\" row=8 col=8 role=data path=[\"grid\", \"cells\", 88, \"text\"] value=\"0.15\"\nCELL_ID=\"S-sec-5-4.T1.R8C9\" row=8 col=9 role=data path=[\"grid\", \"cells\", 89, \"text\"] value=\"0.32\"\nCELL_ID=\"S-sec-5-4.T1.R9C0\" row=9 col=0 role=data path=[\"grid\", \"cells\", 90, \"text\"] value=\"\"\nCELL_ID=\"S-sec-5-4.T1.R9C1\" row=9 col=1 role=data path=[\"grid\", \"cells\", 91, \"text\"] value=\"PATE-GAN\"\nCELL_ID=\"S-sec-5-4.T1.R9C2\" row=9 col=2 role=data path=[\"grid\", \"cells\", 92, \"text\"] value=\"0.73\"\nCELL_ID=\"S-sec-5-4.T1.R9C3\" row=9 col=3 role=data path=[\"grid\", \"cells\", 93, \"text\"] value=\"0.65\"\nCELL_ID=\"S-sec-5-4.T1.R9C4\" row=9 col=4 role=data path=[\"grid\", \"cells\", 94, \"text\"] value=\"0.23\"\nCELL_ID=\"S-sec-5-4.T1.R9C5\" row=9 col=5 role=data path=[\"grid\", \"cells\", 95, \"text\"] value=\"0.56\"\nCELL_ID=\"S-sec-5-4.T1.R9C6\" row=9 col=6 role=data path=[\"grid\", \"cells\", 96, \"text\"] value=\"0.79\"\nCELL_ID=\"S-sec-5-4.T1.R9C7\" row=9 col=7 role=data path=[\"grid\", \"cells\", 97, \"text\"] value=\"0.41\"\nCELL_ID=\"S-sec-5-4.T1.R9C8\" row=9 col=8 role=data path=[\"grid\", \"cells\", 98, \"text\"] value=\"0.21\"\nCELL_ID=\"S-sec-5-4.T1.R9C9\" row=9 col=9 role=data path=[\"grid\", \"cells\", 99, \"text\"] value=\"0.22\"\nTABLE_ROW_COVERAGE: shown rows 10/37; values outside the displayed cells are not available to this Mapping call.\nCONTEXT_PARTIAL: only displayed values/substrings are available; request more evidence for omitted content.",
+      "source_quote": null,
+      "groundings": [
+        {
+          "cell_id": "S-sec-5-4.T1.R0C9",
+          "path": [
+            "grid",
+            "cells",
+            9,
+            "text"
+          ],
+          "expected": "AuRC",
+          "mode": "equals",
+          "description": "Header cell showing AuRC (Area under the Radar Chart) as a column in the comparative results table, representing the unifying metric."
+        },
+        {
+          "cell_id": "S-sec-5-4.T1.R1C9",
+          "path": [
+            "grid",
+            "cells",
+            19,
+            "text"
+          ],
+          "expected": "0.31",
+          "mode": "contains",
+          "description": "Example AuRC value provided in the table (illustrates that AuRC is computed and reported)."
+        }
+      ],
+      "section_id": "S-sec-5-4",
+      "confidence": 0.88
+    },
+    {
+      "visual_groundings": [
+        {
+          "asset_id": "A4",
+          "observation": "Radar charts for six datasets with spokes labeled by five performance objectives (RA, EM, DI, RE, TA).",
+          "region_description": "Six small radar plots arranged in 2 columns x 3 rows; spoke labels visible near plot edges (RA, EM, DI, RE, TA).",
+          "legibility": "readable",
+          "bbox": null,
+          "source_path": "assets/A4.jpg",
+          "source_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+          "sent_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+          "model": "gpt-5-mini-2025-08-07",
+          "source_verified": true,
+          "reading_verified": false
+        }
+      ],
+      "source_anchors": [
+        {
+          "element_id": "S-sec-5-5.F1",
+          "selector": {
+            "type": "element"
+          }
+        }
+      ],
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "verification_level": "image_observation",
+      "source_table_number": null,
+      "table_cell_contexts": {},
+      "evidence_id": "evidence_003",
+      "evidence_type": "figure",
+      "source_element_id": "S-sec-5-5.F1",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: image_observation\n\nMODEL_IMAGE_READING (not an exact text/cell verification): {\"asset_id\": \"A4\", \"source_path\": \"assets/A4.jpg\", \"region\": \"Six small radar plots arranged in 2 columns x 3 rows; spoke labels visible near plot edges (RA, EM, DI, RE, TA).\", \"legibility\": \"readable\", \"observation\": \"Radar charts for six datasets with spokes labeled by five performance objectives (RA, EM, DI, RE, TA).\"}",
+      "source_quote": null,
+      "groundings": [],
+      "section_id": "S-sec-5-5",
+      "confidence": 0.9
+    },
+    {
+      "visual_groundings": [
+        {
+          "asset_id": "A4",
+          "observation": "Legend/labels on the figure include per-method AuRC values summarized in the legend next to the radar plots, providing an at-a-glance summary of combined performance.",
+          "region_description": "Each subplot has a small legend listing methods and an AuRC value (e.g., 'HydraGAN 0.35', 'Original Data 0.38', etc.)",
+          "legibility": "readable",
+          "bbox": null,
+          "source_path": "assets/A4.jpg",
+          "source_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+          "sent_sha256": "7f72517d26e4584c46e63e6216a6a0475bd34ebb8f881bc0cba0bec83ddfd7a0",
+          "model": "gpt-5-mini-2025-08-07",
+          "source_verified": true,
+          "reading_verified": false
+        }
+      ],
+      "source_anchors": [
+        {
+          "element_id": "S-sec-5-5.F1",
+          "selector": {
+            "type": "element"
+          }
+        }
+      ],
+      "source_revision": "sha256:0b494e16f923b6ec71ea9c6acca409fec7f00d5103321f6c8b4b1a65bc082254",
+      "verification_level": "image_observation",
+      "source_table_number": null,
+      "table_cell_contexts": {},
+      "evidence_id": "evidence_004",
+      "evidence_type": "figure",
+      "source_element_id": "S-sec-5-5.F1",
+      "role": "support",
+      "content": "VERIFICATION_LEVEL: image_observation\n\nMODEL_IMAGE_READING (not an exact text/cell verification): {\"asset_id\": \"A4\", \"source_path\": \"assets/A4.jpg\", \"region\": \"Each subplot has a small legend listing methods and an AuRC value (e.g., 'HydraGAN 0.35', 'Original Data 0.38', etc.)\", \"legibility\": \"readable\", \"observation\": \"Legend/labels on the figure include per-method AuRC values summarized in the legend next to the radar plots, providing an at-a-glance summary of combined performance.\"}",
+      "source_quote": null,
+      "groundings": [],
+      "section_id": "S-sec-5-5",
+      "confidence": 0.9
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "relation_001",
+      "source_id": "evidence_001",
+      "target_id": "claim_002",
+      "relation_type": "supports",
+      "discovery_method": "explicit_link",
+      "confidence": 0.9,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "S-sec-5-4.T1",
+        "S-sec-5-4.P1"
+      ]
+    },
+    {
+      "relation_id": "relation_002",
+      "source_id": "evidence_002",
+      "target_id": "claim_003",
+      "relation_type": "supports",
+      "discovery_method": "explicit_link",
+      "confidence": 0.88,
+      "source_verified": false,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "rejected",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "S-sec-5-4.T1",
+        "S-sec-5-4.P2"
+      ]
+    },
+    {
+      "relation_id": "relation_003",
+      "source_id": "evidence_003",
+      "target_id": "claim_002",
+      "relation_type": "supports",
+      "discovery_method": "local_context",
+      "confidence": 0.9,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "S-sec-5-5.F1",
+        "S-sec-5-4.P1"
+      ]
+    },
+    {
+      "relation_id": "relation_004",
+      "source_id": "evidence_004",
+      "target_id": "claim_003",
+      "relation_type": "supports",
+      "discovery_method": "local_context",
+      "confidence": 0.9,
+      "source_verified": true,
+      "semantic_review_status": "not_assessed",
+      "semantic_review_note": null,
+      "source_integrity_status": "verified",
+      "source_integrity_note": null,
+      "source_element_ids": [
+        "S-sec-5-5.F1",
+        "S-sec-5-4.P2"
+      ]
+    }
+  ],
+  "reasoning_paths": [
+    {
+      "path_id": "reader_path_001",
+      "target_id": "claim_002",
+      "node_ids": [
+        "evidence_001",
+        "claim_002"
+      ],
+      "relation_ids": [
+        "relation_001"
+      ],
+      "path_role": "secondary",
+      "confidence": 0.8,
+      "explanation": "The table cells enumerate the metric labels EM, RA, RE, TA, DI. That directly corresponds to the claim’s list of radar-chart spokes and thus substantiates the claim that these specific metrics are the ones represented. This is supporting but a tabular list is less direct evidence of the visual “spokes” than the figure itself, so it is marked secondary.",
+      "needs_more_mapping": false,
+      "gap_description": null,
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    },
+    {
+      "path_id": "reader_path_002",
+      "target_id": "claim_002",
+      "node_ids": [
+        "evidence_003",
+        "claim_002"
+      ],
+      "relation_ids": [
+        "relation_003"
+      ],
+      "path_role": "primary",
+      "confidence": 0.9,
+      "explanation": "The figure image observation explicitly describes radar plots with spokes labeled RA, EM, DI, RE, TA. That visually demonstrates that the radar-chart spokes represent those metrics and is the most direct piece of evidence for the claim about the chart spokes.",
+      "needs_more_mapping": false,
+      "gap_description": null,
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    },
+    {
+      "path_id": "reader_path_003",
+      "target_id": "claim_003",
+      "node_ids": [
+        "evidence_004",
+        "claim_003"
+      ],
+      "relation_ids": [
+        "relation_004"
+      ],
+      "path_role": "primary",
+      "confidence": 0.75,
+      "explanation": "The figure reading notes that each radar subplot legend lists per-method AuRC values and that these values provide an at-a-glance summary alongside the radar plots. This supports the claim that using the radar chart quantified by AuRC yields a concise summary of the multiple data characteristics. The evidence is an image observation (legend + AuRC values) rather than a formal textual argument, so confidence is slightly lower but still supportive.",
+      "needs_more_mapping": false,
+      "gap_description": null,
+      "reaches_source_evidence": true,
+      "source_context_check_needed": false
+    }
+  ],
+  "gaps": [],
+  "explanation": "CLAIM → EVIDENCE LINKS (Reader-v2; no proof grading)\n\n[claim_001] Each spoke of the radar chart represents one of the performance metrics, and the goal of HydraGAN is to maximize the combined value along the spokes, thus maximizing the Area under the Radar Chart (AuRC).\nSource: S-sec-5-4.P1\nNo linked Evidence in this run.\n\n[claim_002] Corresponding to the metrics we defined, in this article the radar chart spokes represent retained accuracy (RA), EM distance (EM), diversity (DI), re-identification error (RE), and target accuracy (TA).\nSource: S-sec-5-4.P1\nLinks: supports: evidence_001; supports: evidence_003\n\n[claim_003] The use of a radar chart, quantified with a unifying metric of AuRC, allows the multiple data characteristics to be quantified alongside a summary that provides an at-a-glance encapsulation of all targeted metrics.\nSource: S-sec-5-4.P2\nLinks: supports: evidence_002; supports: evidence_004"
+}
